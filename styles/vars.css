@@ -1,0 +1,45 @@
+:root {
+  /* sizes */
+  --size-extra-small: 0.4rem;
+  --size-small: 0.8rem;
+  --size-base: 1.6rem;
+  --size-medium: 3.2rem;
+  --size-large: 6.4rem;
+  --size-extra-large: 12.8rem;
+  --size-super: 19.2rem;
+
+  /* colors */
+  --color-black: #000;
+  --color-nearly-black: #333;
+  --color-white: #fff;
+  --color-grey: #858585;
+  --color-grey-light: #f2f2f2;
+  --color-red: #c00;
+
+  /* font size */
+  --font-size-extra-small: 1.2rem;
+  --font-size-small: 1.4rem;
+  --font-size-base: 1.6rem;
+  --font-size-medium: 1.8rem;
+  --font-size-large: 2.4rem;
+  --font-size-extra-large: 3.6rem;
+  --font-size-super: 4.8rem;
+  --font-size-max: 5.4rem;
+
+  /* font weight */
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semi-bold: 600;
+  --font-weight-bold: 700;
+
+  /* border raduis */
+  --border-radius-small: 0.8rem;
+  --border-radius-medium: 1.6rem;
+  --border-radius-large: 3.2rem;
+  --border-radius-max: 50%;
+
+  /* transitions */
+  --transition-fast: all 0.2s ease-in-out;
+  --transition-base: all 0.8s ease-in-out;
+}
