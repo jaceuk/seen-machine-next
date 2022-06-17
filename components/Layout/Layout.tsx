@@ -6,7 +6,7 @@ interface IProps {
 
 export default function Layout({ children }: IProps) {
   return (
-    <div>
+    <div className="wrapper">
       {children}
       <Footer />
     </div>
