@@ -14,13 +14,15 @@ export default function CardVertical({ data }: { data: any }) {
   return (
     <>
       <button className={styles.result} onClick={handleToggleDetails}>
-        <Image
-          width="150"
-          height="225"
-          className={styles.image}
-          src={data.poster_path ? `https://image.tmdb.org/t/p/w154/${data.poster_path}` : posterPlaceholder}
-          alt=""
-        />
+        <div className={styles.imageContainer}>
+          <Image
+            layout="fill"
+            objectFit="cover"
+            className={styles.image}
+            src={data.poster_path ? `https://image.tmdb.org/t/p/w154/${data.poster_path}` : posterPlaceholder}
+            alt=""
+          />
+        </div>
 
         <div className="title">{data.name || data.title}</div>
       </button>

@@ -11,16 +11,13 @@ export default function CardHorizontal({ data }: { data: any }) {
     setShowDetails(!showDetails);
   }
 
-  console.log(data);
-
   return (
     <>
       <button className={styles.result} onClick={handleToggleDetails}>
         <div className={styles.imageContainer}>
           <Image
-            width={92}
-            height={138}
             layout="fill"
+            objectFit="cover"
             className={styles.image}
             src={data.poster_path ? `https://image.tmdb.org/t/p/w92/${data.poster_path}` : posterPlaceholder}
             alt=""

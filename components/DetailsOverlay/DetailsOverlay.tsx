@@ -18,7 +18,7 @@ export default function DetailsOverlay({ data, handleClose }: IProps) {
       <div className={styles.backdrop}>
         <Image
           layout="fill"
-          className={styles.image}
+          objectFit="cover"
           src={data.backdrop_path ? `https://image.tmdb.org/t/p/w400/${data.backdrop_path}` : backdropPlaceholder}
           alt=""
         />

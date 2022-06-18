@@ -17,6 +17,12 @@
   overflow: hidden;
 }
 
+.imageContainer {
+  position: relative;
+  width: 150px;
+  height: 225px;
+}
+
 .image {
   border-radius: var(--border-radius-small);
 }
