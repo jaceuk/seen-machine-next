@@ -1,4 +1,5 @@
 import Footer from '@components/Footer';
+import Header from '@components/Header';
 
 interface IProps {
   children: React.ReactNode;
@@ -7,7 +8,8 @@ interface IProps {
 export default function Layout({ children }: IProps) {
   return (
     <div className="wrapper">
-      {children}
+      <Header />
+      <main>{children}</main>
       <Footer />
     </div>
   );

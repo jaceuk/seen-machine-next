@@ -4,6 +4,10 @@
   position: relative;
 }
 
+main {
+  padding: var(--size-base) var(--size-base) 72px var(--size-base);
+}
+
 .stack {
   display: grid;
   gap: var(--size-base);
