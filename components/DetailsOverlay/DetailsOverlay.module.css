@@ -1,0 +1,32 @@
+.backdrop {
+  aspect-ratio: 16/9;
+  width: 100%;
+  position: relative;
+}
+
+.title {
+  font-family: 'Poppins', sans-serif;
+  color: var(--color-nearly-black);
+}
+
+.image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.backButton {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-nearly-black);
+  display: flex;
+  padding: var(--size-small);
+  border-radius: var(--border-radius-max);
+  position: absolute;
+  top: var(--size-base);
+  left: var(--size-base);
+  z-index: 10;
+}
+
+.main {
+  padding: var(--size-base);
+}

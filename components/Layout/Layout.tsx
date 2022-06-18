@@ -5,7 +5,7 @@ interface IProps {
   children: React.ReactNode;
 }
 
-export default function Layout({ children }: IProps) {
+export default function LayoutSearch({ children }: IProps) {
   return (
     <div className="wrapper">
       <Header />
