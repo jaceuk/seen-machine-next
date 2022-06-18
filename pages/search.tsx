@@ -1,13 +1,15 @@
 import * as React from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import SearchForm from '@components/SearchForm/SearchForm';
+import SearchForm from '@components/SearchForm';
+import CardHorizontal from '@components/CardHorizontal';
+import styles from './Search.module.css';
 
 export default function Home() {
   const router = useRouter();
   const [results, setResults] = React.useState([]);
 
-  const term = router.query.q || '';
+  const term = router.query.q;
 
   async function getData() {
     const response = await fetch(
@@ -24,7 +26,6 @@ export default function Home() {
     if (term) {
       const fetchData = async () => {
         const data = await getData();
-        console.log(data);
         setResults(data);
       };
       fetchData();
@@ -39,11 +40,11 @@ export default function Home() {
 
       <SearchForm />
 
-      <div className="results">
+      <main className={styles.results}>
         {results.map((result, index) => (
-          <p key={index}>{result.name}</p>
+          <CardHorizontal key={index} data={result} />
         ))}
-      </div>
+      </main>
     </>
   );
 }

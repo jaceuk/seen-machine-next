@@ -1,0 +1,30 @@
+.result {
+  text-align: left;
+  display: flex;
+  align-items: flex-start;
+  gap: var(--size-base);
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.textContainer {
+  flex-grow: 1;
+}
+
+.imageContainer {
+  min-width: 92px;
+  min-height: 138px;
+  position: relative;
+}
+
+.image {
+  border-radius: var(--border-radius-small);
+  object-fit: cover;
+}
+
+.releaseDate {
+  color: var(--color-grey);
+  font-size: var(--font-size-small);
+}
