@@ -35,11 +35,14 @@ export default function Home() {
     throw new Error(data.status_message);
   }
 
-  async function fetchMoreMovies(page) {
-    console.log(page);
+  async function fetchMoreShows(page: number) {
+    const moreShows = await getData(shows.results, term, 'tv', page);
+    setShows(moreShows);
+  }
+
+  async function fetchMoreMovies(page: number) {
     const moreMovies = await getData(movies.results, term, 'movie', page);
     setMovies(moreMovies);
-    console.log(moreMovies);
   }
 
   React.useEffect(() => {
@@ -68,11 +71,23 @@ export default function Home() {
             totalShows={shows.totalResults}
             totalMovies={movies.totalResults}
             shows={
-              <div className={styles.results}>
-                {shows.results.map((result, index) => (
-                  <CardHorizontal key={index} data={result} />
-                ))}
-              </div>
+              <InfiniteScroll
+                pageStart={1}
+                loadMore={fetchMoreShows}
+                hasMore={shows.page < shows.totalPages}
+                loader={
+                  <div className="loader" key={0}>
+                    Loading ...
+                  </div>
+                }
+                className={styles.results}
+              >
+                <div className={styles.results}>
+                  {shows.results.map((result, index) => (
+                    <CardHorizontal key={index} data={result} />
+                  ))}
+                </div>
+              </InfiniteScroll>
             }
             movies={
               <InfiniteScroll
