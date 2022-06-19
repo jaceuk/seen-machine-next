@@ -5,6 +5,7 @@ import SearchForm from '@components/SearchForm';
 import TabGroup from '@components/TabGroup';
 import CardHorizontal from '@components/CardHorizontal';
 import styles from './Search.module.css';
+import InfiniteScroll from 'react-infinite-scroller';
 
 export default function Home() {
   const router = useRouter();
@@ -20,7 +21,7 @@ export default function Home() {
     const data = await response.json();
 
     if (response.ok) {
-      const results = [...data.results, ...prevResults];
+      const results = [...prevResults, ...data.results];
 
       return {
         status: response.status,
@@ -32,6 +33,13 @@ export default function Home() {
     }
 
     throw new Error(data.status_message);
+  }
+
+  async function fetchMoreMovies(page) {
+    console.log(page);
+    const moreMovies = await getData(movies.results, term, 'movie', page);
+    setMovies(moreMovies);
+    console.log(moreMovies);
   }
 
   React.useEffect(() => {
@@ -67,11 +75,21 @@ export default function Home() {
               </div>
             }
             movies={
-              <div className={styles.results}>
+              <InfiniteScroll
+                pageStart={1}
+                loadMore={fetchMoreMovies}
+                hasMore={movies.page < movies.totalPages}
+                loader={
+                  <div className="loader" key={0}>
+                    Loading ...
+                  </div>
+                }
+                className={styles.results}
+              >
                 {movies.results.map((result, index) => (
                   <CardHorizontal key={index} data={result} />
                 ))}
-              </div>
+              </InfiniteScroll>
             }
           />
         </main>
