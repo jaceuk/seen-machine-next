@@ -21,6 +21,7 @@
   position: relative;
   width: 150px;
   height: 225px;
+  margin-bottom: var(--size-base);
 }
 
 .image {
