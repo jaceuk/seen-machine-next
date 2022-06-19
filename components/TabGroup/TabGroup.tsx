@@ -4,11 +4,11 @@ import styles from './TabGroup.module.css';
 interface IProps {
   shows: any;
   movies: any;
-  totalShows: number;
-  totalMovies: number;
+  totalShows?: number;
+  totalMovies?: number;
 }
 
-export default function TabGroup({ shows, movies, totalShows, totalMovies }: IProps) {
+export default function TabGroup({ shows, movies, totalShows = 0, totalMovies = 0 }: IProps) {
   const [selectedTab, setSelectedTab] = React.useState(1);
 
   return (
@@ -23,7 +23,7 @@ export default function TabGroup({ shows, movies, totalShows, totalMovies }: IPr
           aria-controls="tv-content-panel"
         >
           <span>TV shows</span>
-          {totalShows && <span className={styles.count}>({totalShows})</span>}
+          {totalShows > 0 && <span className={styles.count}>({totalShows})</span>}
         </button>
 
         <button
@@ -35,7 +35,7 @@ export default function TabGroup({ shows, movies, totalShows, totalMovies }: IPr
           aria-controls="movies-content-panel"
         >
           <span>Movies</span>
-          {totalMovies && <span className={styles.count}>({totalMovies})</span>}
+          {totalMovies > 0 && <span className={styles.count}>({totalMovies})</span>}
         </button>
       </div>
 
