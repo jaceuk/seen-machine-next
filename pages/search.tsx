@@ -16,7 +16,7 @@ export default function Home() {
 
   async function getData(prevResults: any, term: string | string[], type: string, page: number) {
     const response = await fetch(
-      `https://api.themoviedb.org/3/search/${type}?api_key=6356a51ba0311540ab85aa34624d0e3e&query=${term}&page=${page}`,
+      `https://api.themoviedb.org/3/search/${type}?api_key=${process.env.NEXT_PUBLIC_TMDB_API_KEY}&query=${term}&page=${page}`,
     );
     const data = await response.json();
 
