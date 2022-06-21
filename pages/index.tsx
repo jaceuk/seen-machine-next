@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import styles from './index.module.css';
 
 export default function Home() {
   return (
@@ -7,7 +8,10 @@ export default function Home() {
         <title>Jason Newington - Developer, Designer and Geek</title>
       </Head>
 
-      <a href="/home">Home</a>
+      <div className={styles.container}>
+        <h1>Seen Machine</h1>
+        <a href="/home">Home</a>
+      </div>
     </>
   );
 }

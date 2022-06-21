@@ -11,7 +11,7 @@ export default function Home() {
       <HeaderProfile />
 
       <main>
-        <a href="/home">Loading page</a>
+        <a href="/">Loading page</a>
       </main>
     </>
   );

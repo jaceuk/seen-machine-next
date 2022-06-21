@@ -3,7 +3,7 @@ import TabGroup from '@components/TabGroup';
 import CardVertical from '@components/CardVertical';
 import trendingShows from '@data/trendingShows.json';
 import trendingMovies from '@data/trendingMovies.json';
-import styles from './index.module.css';
+import styles from './home.module.css';
 
 export default function Home() {
   return (

@@ -1,9 +1,7 @@
-.results {
+.container {
   display: flex;
-  gap: var(--size-base);
-  margin: var(--size-base) calc(var(--size-base) * -1);
-  align-items: flex-start;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  padding: 0 var(--size-base);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
 }
