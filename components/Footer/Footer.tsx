@@ -13,7 +13,7 @@ export default function Footer() {
     <footer className={styles.footer}>
       <nav className={styles.nav}>
         <Link href="/home">
-          <a className={router.pathname === '/' ? styles.active : ''}>
+          <a className={router.pathname === '/home' ? styles.active : ''}>
             <HomeSVG />
           </a>
         </Link>
