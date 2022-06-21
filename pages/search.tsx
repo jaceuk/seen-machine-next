@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import SearchForm from '@components/SearchForm';
+import HeaderSearch from '@components/HeaderSearch';
 import TabGroup from '@components/TabGroup';
 import CardHorizontal from '@components/CardHorizontal';
 import styles from './Search.module.css';
@@ -63,7 +63,7 @@ export default function Home() {
         <title>Jason Newington - Developer, Designer and Geek</title>
       </Head>
 
-      <SearchForm />
+      <HeaderSearch />
 
       {shows.results && movies.results && (
         <main className={styles.main}>

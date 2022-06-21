@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import ArrowLeftSVG from '@components/svgs/ArrowLeftSVG';
 import styles from './SearchForm.module.css';
 
-export default function SearchForm() {
+export default function HeaderSearch() {
   const router = useRouter();
   const [term, setTerm] = React.useState('');
 

@@ -11,7 +11,7 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.navbar}>
         <h1>
-          {(router.pathname === '/' || router.pathname === '/_error') && 'Seen Machine'}
+          {(router.pathname === '/home' || router.pathname === '/_error') && 'Seen Machine'}
           {router.pathname === '/watched' && 'Watched'}
           {router.pathname === '/watch-list' && 'Watch list'}
           {router.pathname === '/recommended' && 'Recommended'}

@@ -1,7 +1,7 @@
 import { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
+import LayoutMain from '@components/LayoutMain';
 import Layout from '@components/Layout';
-import LayoutSearch from '@components/LayoutSearch';
 import '@styles/vars.css';
 import '@styles/normalize.css';
 import '@styles/reset.css';
@@ -13,15 +13,23 @@ export default function App({ Component, pageProps }: AppProps) {
 
   if (router.pathname.startsWith('/search')) {
     return (
-      <LayoutSearch>
+      <Layout>
         <Component {...pageProps}></Component>
-      </LayoutSearch>
+      </Layout>
+    );
+  }
+
+  if (router.pathname.startsWith('/profile')) {
+    return (
+      <Layout>
+        <Component {...pageProps}></Component>
+      </Layout>
     );
   }
 
   return (
-    <Layout>
+    <LayoutMain>
       <Component {...pageProps} />
-    </Layout>
+    </LayoutMain>
   );
 }
