@@ -1,0 +1,15 @@
+.button {
+  background: var(--color-white);
+  padding: var(--size-small) var(--size-base);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  box-shadow: var(--button-box-shadow);
+  border-radius: var(--border-radius-large);
+
+  &.active {
+    background: var(--color-red);
+    color: var(--color-white);
+  }
+}

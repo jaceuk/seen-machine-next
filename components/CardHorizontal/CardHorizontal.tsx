@@ -25,7 +25,7 @@ export default function CardHorizontal({ data }: { data: any }) {
         </div>
 
         <div className={styles.textContainer}>
-          <h2 className="title">{data.name || data.title}</h2>
+          <div className={styles.title}>{data.name || data.title}</div>
           <div className={styles.releaseDate}>{data.release_date || data.first_air_date}</div>
         </div>
       </button>

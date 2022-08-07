@@ -15,13 +15,13 @@ export default function Home() {
       <TabGroup
         shows={
           <>
-            <h2>Trending TV shows</h2>
+            <h1>Recommended</h1>
             <div className={styles.results}>
               {trendingShows.results.map((show, index) => (
                 <CardVertical key={index} data={show} />
               ))}
             </div>
-            <h2>Latest TV shows</h2>
+            <h1>Watched</h1>
             <div className={styles.results}>
               {trendingShows.results.map((show, index) => (
                 <CardVertical key={index} data={show} />
@@ -31,7 +31,7 @@ export default function Home() {
         }
         movies={
           <>
-            <h2>Trending movies</h2>
+            <h1>Trending</h1>
             <div className={styles.results}>
               {trendingMovies.results.map((movie, index) => (
                 <CardVertical key={index} data={movie} />

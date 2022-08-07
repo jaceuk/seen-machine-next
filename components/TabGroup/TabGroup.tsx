@@ -1,5 +1,5 @@
 import * as React from 'react';
-import styles from './TabGroup.module.css';
+import styles from './TabGroup.module.scss';
 
 interface IProps {
   shows: any;
@@ -15,7 +15,7 @@ export default function TabGroup({ shows, movies, totalShows = 0, totalMovies = 
     <>
       <div className={styles.tablist} role="tablist" aria-orientation="horizontal">
         <button
-          className={styles.button}
+          className={`${styles.button}`}
           onClick={() => setSelectedTab(1)}
           role="tab"
           aria-selected={selectedTab === 1 ? 'true' : 'false'}
@@ -23,7 +23,7 @@ export default function TabGroup({ shows, movies, totalShows = 0, totalMovies = 
           aria-controls="tv-content-panel"
         >
           <span>TV shows</span>
-          {totalShows > 0 && <span className={styles.count}>({totalShows})</span>}
+          {totalShows > 0 && <span className={styles.count}>&nbsp;({totalShows})</span>}
         </button>
 
         <button
@@ -35,7 +35,7 @@ export default function TabGroup({ shows, movies, totalShows = 0, totalMovies = 
           aria-controls="movies-content-panel"
         >
           <span>Movies</span>
-          {totalMovies > 0 && <span className={styles.count}>({totalMovies})</span>}
+          {totalMovies > 0 && <span className={styles.count}>&nbsp;({totalMovies})</span>}
         </button>
       </div>
 

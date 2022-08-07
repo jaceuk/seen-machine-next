@@ -2,31 +2,32 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { User, Search } from 'iconoir-react';
 import styles from './Header.module.scss';
+import Button from '@components/Button';
 
 export default function Header() {
   const router = useRouter();
 
   return (
     <header className={styles.header}>
-      <h1>
+      <div className={styles.logo}>
         {(router.pathname === '/home' || router.pathname === '/_error') && 'Seen Machine'}
         {router.pathname === '/watched' && 'Watched'}
         {router.pathname === '/watch-list' && 'Watch list'}
         {router.pathname === '/recommended' && 'Recommended'}
-      </h1>
+      </div>
 
       <div className={styles.buttons}>
-        <button className={styles.button}>
+        <Button>
           <Link href="/profile">
             <User />
           </Link>
-        </button>
+        </Button>
 
-        <button className={`${styles.button} ${styles.active}`}>
+        <Button active>
           <Link href="/search">
             <Search />
           </Link>
-        </button>
+        </Button>
       </div>
     </header>
   );

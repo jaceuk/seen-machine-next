@@ -1,0 +1,30 @@
+.count {
+  font-size: var(--font-size-extra-small);
+}
+
+.tablist {
+  display: flex;
+  margin-bottom: var(--size-base);
+  position: relative;
+  background: var(--color-white);
+  box-shadow: var(--button-box-shadow);
+  border-radius: var(--border-radius-large);
+  width: fit-content;
+}
+
+.button {
+  padding: var(--size-small) var(--size-medium);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  height: 48px;
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-medium);
+
+  &[aria-selected='true'] {
+    background: var(--color-red);
+    color: var(--color-white);
+    border-radius: var(--border-radius-large);
+  }
+}

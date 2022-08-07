@@ -1,0 +1,39 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  z-index: 200;
+  width: 100%;
+  max-width: 900px;
+  box-shadow: var(--footer-box-shadow);
+  background: var(--nav-background);
+}
+
+.nav {
+  width: 343px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  gap: var(--size-base);
+
+  .navItem {
+    padding: 0 0 var(--size-base) 0;
+    width: 25%;
+
+    .pill {
+      background: transparent;
+      height: var(--size-extra-small);
+      margin-bottom: var(--size-base);
+      border-radius: 0 0 var(--border-radius-small) var(--border-radius-small);
+
+      &.active {
+        background: var(--color-red);
+      }
+    }
+
+    & > button {
+      width: 100%;
+    }
+  }
+}

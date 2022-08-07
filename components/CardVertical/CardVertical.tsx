@@ -2,7 +2,7 @@ import * as React from 'react';
 import Image from 'next/image';
 import DetailsOverlay from '@components/DetailsOverlay';
 import posterPlaceholder from '/images/posterPlaceholder.png';
-import styles from './CardVertical.module.css';
+import styles from './CardVertical.module.scss';
 
 export default function CardVertical({ data }: { data: any }) {
   const [showDetails, setShowDetails] = React.useState(false);

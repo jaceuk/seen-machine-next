@@ -3,10 +3,10 @@
   --size-extra-small: 0.4rem;
   --size-small: 0.8rem;
   --size-base: 1.6rem;
-  --size-medium: 3.2rem;
-  --size-large: 6.4rem;
-  --size-extra-large: 12.8rem;
-  --size-super: 19.2rem;
+  --size-medium: 2.4rem;
+  --size-large: 3.2rem;
+  --size-extra-large: 6.4rem;
+  --size-super: 12.8rem;
 
   /* colors */
   --color-black: #000;
@@ -19,14 +19,12 @@
   --color-red: #c00;
 
   /* font size */
-  --font-size-extra-small: 1.2rem;
-  --font-size-small: 1.4rem;
-  --font-size-base: 1.6rem;
-  --font-size-medium: 1.8rem;
-  --font-size-large: 2.4rem;
-  --font-size-extra-large: 3.6rem;
-  --font-size-super: 4.8rem;
-  --font-size-max: 5.4rem;
+  --font-size-extra-small: 1.4rem;
+  --font-size-small: 1.6rem;
+  --font-size-body: 1.8rem;
+  --font-size-h3: 2.4rem;
+  --font-size-h2: 2.8rem;
+  --font-size-h1: 3.2rem;
 
   /* font weight */
   --font-weight-light: 300;
