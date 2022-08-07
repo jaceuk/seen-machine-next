@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Overlay from '@components/Overlay';
-import ArrowLeftSVG from '@components/svgs/ArrowLeftSVG';
+import { NavArrowLeft } from 'iconoir-react';
 import backdropPlaceholder from '/images/backdropPlaceholder.png';
 import styles from './DetailsOverlay.module.css';
 
@@ -13,7 +13,7 @@ export default function DetailsOverlay({ data, handleClose }: IProps) {
   return (
     <Overlay>
       <button className={styles.backButton} onClick={handleClose} aria-label="Back">
-        <ArrowLeftSVG />
+        <NavArrowLeft />
       </button>
       <div className={styles.backdrop}>
         <Image

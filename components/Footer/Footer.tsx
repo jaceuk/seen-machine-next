@@ -1,9 +1,6 @@
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import HomeSVG from '@components/svgs/HomeSVG';
-import WatchedSVG from '@components/svgs/WatchedSVG';
-import WatchListSVG from '@components/svgs/WatchListSVG';
-import RecommendedSVG from '@components/svgs/RecommendedSVG';
+import { Home, Heart, Calendar, SecurityPass } from 'iconoir-react';
 import styles from './Footer.module.css';
 
 export default function Footer() {
@@ -14,22 +11,22 @@ export default function Footer() {
       <nav className={styles.nav}>
         <Link href="/home">
           <a className={router.pathname === '/home' ? styles.active : ''}>
-            <HomeSVG />
+            <Home />
           </a>
         </Link>
         <Link href="/watched">
           <a className={router.pathname === '/watched' ? styles.active : ''}>
-            <WatchedSVG />
+            <Heart />
           </a>
         </Link>
         <Link href="/watch-list">
           <a className={router.pathname === '/watch-list' ? styles.active : ''}>
-            <WatchListSVG />
+            <Calendar />
           </a>
         </Link>
         <Link href="/recommended">
           <a className={router.pathname === '/recommended' ? styles.active : ''}>
-            <RecommendedSVG />
+            <SecurityPass />
           </a>
         </Link>
         <span className={styles.pill} />

@@ -19,13 +19,14 @@
 }
 
 .nav a {
-  width: 40px;
-  padding: var(--size-base);
-  text-align: center;
+  padding: var(--size-small) var(--size-base);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
   color: var(--color-nearly-black);
   width: 25%;
-  height: 56px;
+  height: 48px;
 }
 
 .nav a:nth-child(1).active ~ .pill {
@@ -53,7 +54,7 @@
   left: 0;
   top: 0;
   width: 86px;
-  height: 56px;
+  height: 48px;
   background: #f2f2f2;
   border-radius: 28px;
   z-index: -1;
