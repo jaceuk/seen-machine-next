@@ -12,6 +12,8 @@
   --color-black: #000;
   --color-nearly-black: #333;
   --color-white: #fff;
+  --color-white-60: rgba(255, 255, 255, 0.6);
+  --color-white-80: rgba(255, 255, 255, 0.8);
   --color-grey: #858585;
   --color-grey-light: #f2f2f2;
   --color-red: #c00;
@@ -42,4 +44,12 @@
   /* transitions */
   --transition-fast: all 0.2s ease-in-out;
   --transition-base: all 0.8s ease-in-out;
+
+  /* misc */
+  --nav-background: var(--color-white-80);
+  --header-bottom-background: var(--color-white-60);
+  --card-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+  --button-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  --header-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  --footer-box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.25);
 }

@@ -1,5 +1,5 @@
 import Footer from '@components/Footer';
-import Header from '@components/Header';
+import Hero from '@components/Hero';
 
 interface IProps {
   children: React.ReactNode;
@@ -8,7 +8,7 @@ interface IProps {
 export default function LayoutSearch({ children }: IProps) {
   return (
     <div className="wrapper">
-      <Header />
+      <Hero />
       <main>{children}</main>
       <Footer />
     </div>

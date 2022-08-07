@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import ArrowLeftSVG from '@components/svgs/ArrowLeftSVG';
+import { NavArrowLeft } from 'iconoir-react';
 import styles from './HeaderProfile.module.css';
 
 export default function HeaderProfile() {
@@ -12,7 +12,7 @@ export default function HeaderProfile() {
   return (
     <header className={styles.header}>
       <button className={styles.backButton} onClick={handleBack} aria-label="Back">
-        <ArrowLeftSVG />
+        <NavArrowLeft />
       </button>
       <h1 className={styles.h1}>Profile</h1>
     </header>

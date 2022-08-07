@@ -8,29 +8,25 @@ export default function Header() {
 
   return (
     <header className={styles.header}>
-      <div className={styles.navbar}>
-        <h1>
-          {(router.pathname === '/home' || router.pathname === '/_error') && 'Seen Machine'}
-          {router.pathname === '/watched' && 'Watched'}
-          {router.pathname === '/watch-list' && 'Watch list'}
-          {router.pathname === '/recommended' && 'Recommended'}
-        </h1>
+      <h1>
+        {(router.pathname === '/home' || router.pathname === '/_error') && 'Seen Machine'}
+        {router.pathname === '/watched' && 'Watched'}
+        {router.pathname === '/watch-list' && 'Watch list'}
+        {router.pathname === '/recommended' && 'Recommended'}
+      </h1>
 
-        <Link href="/profile">
-          <a className={styles.profile}>
+      <div className={styles.buttons}>
+        <button className={styles.button}>
+          <Link href="/profile">
             <User />
-          </a>
-        </Link>
-      </div>
+          </Link>
+        </button>
 
-      <div className={styles.search}>
-        <Link href="/search">
-          <button className={styles.searchButton}>
+        <button className={`${styles.button} ${styles.active}`}>
+          <Link href="/search">
             <Search />
-
-            <span>Search TV shows & movies</span>
-          </button>
-        </Link>
+          </Link>
+        </button>
       </div>
     </header>
   );

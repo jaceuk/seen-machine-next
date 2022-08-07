@@ -24,7 +24,7 @@ export default function CardVertical({ data }: { data: any }) {
           />
         </div>
 
-        <div className={`title ${styles.title}`}>{data.name || data.title}</div>
+        <div className={`small ${styles.title}`}>{data.name || data.title}</div>
       </button>
 
       {showDetails && <DetailsOverlay handleClose={handleToggleDetails} data={data} />}

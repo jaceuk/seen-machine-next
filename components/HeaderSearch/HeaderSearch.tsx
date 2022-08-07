@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useRouter } from 'next/router';
-import ArrowLeftSVG from '@components/svgs/ArrowLeftSVG';
+import { NavArrowLeft } from 'iconoir-react';
 import styles from './SearchForm.module.css';
 
 export default function HeaderSearch() {
@@ -28,7 +28,7 @@ export default function HeaderSearch() {
     <>
       <header className={styles.header}>
         <button className={styles.backButton} onClick={handleBack} aria-label="Back">
-          <ArrowLeftSVG />
+          <NavArrowLeft />
         </button>
         <form className={styles.form} onSubmit={handleSubmit}>
           <label htmlFor="search" className="sr-only">
