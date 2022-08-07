@@ -18,6 +18,10 @@ h6 {
 html {
   font-size: 62.5%;
   color: var(--color-nearly-black);
+
+  @media (min-width: 900px) {
+    font-size: 78.13%;
+  }
 }
 
 body {

@@ -1,10 +1,9 @@
 import { useRouter } from 'next/router';
-import Link from 'next/link';
-import { User, Search } from 'iconoir-react';
-import styles from './Header.module.scss';
-import Button from '@components/Button';
+import styles from './NavbarTop.module.scss';
+import NavPrimary from '@components/NavPrimary';
+import NavSecondary from '@components/NavSecondary';
 
-export default function Header() {
+export default function Navbar() {
   const router = useRouter();
 
   return (
@@ -17,17 +16,10 @@ export default function Header() {
       </div>
 
       <div className={styles.buttons}>
-        <Button>
-          <Link href="/profile">
-            <User />
-          </Link>
-        </Button>
-
-        <Button active>
-          <Link href="/search">
-            <Search />
-          </Link>
-        </Button>
+        <div className="hide-on-mobile">
+          <NavPrimary />
+        </div>
+        <NavSecondary />
       </div>
     </header>
   );

@@ -1,0 +1,27 @@
+.header {
+  background-color: var(--color-white);
+  z-index: 200;
+  box-shadow: var(--header-box-shadow);
+  background: var(--nav-background);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--size-base);
+
+  @media (min-width: 768px) {
+    padding: 0 var(--size-medium);
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: var(--size-base);
+}
+
+.logo {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-red);
+  font-family: 'MuseoModerno', sans-serif;
+}

@@ -1,12 +1,12 @@
-import Footer from '@components/Footer';
+import Footer from '@components/NavbarBottom';
 import Hero from '@components/Hero';
-import styles from './Layout.module.scss';
+import styles from './LayoutMain.module.scss';
 
 interface IProps {
   children: React.ReactNode;
 }
 
-export default function LayoutSearch({ children }: IProps) {
+export default function LayoutMain({ children }: IProps) {
   return (
     <div className="wrapper">
       <Hero />

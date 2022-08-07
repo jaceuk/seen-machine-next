@@ -1,29 +1,28 @@
-.footer {
-  position: fixed;
-  bottom: 0;
-  z-index: 200;
-  width: 100%;
-  max-width: 900px;
-  box-shadow: var(--footer-box-shadow);
-  background: var(--nav-background);
-}
-
 .nav {
-  width: 343px;
-  margin: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: relative;
   gap: var(--size-base);
+  width: 100%;
+  padding: 0 var(--size-base);
+
+  @media (min-width: 900px) {
+    width: fit-content;
+    padding: 0;
+  }
 
   .navItem {
     padding: 0 0 var(--size-base) 0;
     width: 25%;
 
+    @media (min-width: 900px) {
+      width: auto;
+    }
+
     .pill {
       background: transparent;
-      height: var(--size-extra-small);
+      height: var(--size-small);
       margin-bottom: var(--size-base);
       border-radius: 0 0 var(--border-radius-small) var(--border-radius-small);
 

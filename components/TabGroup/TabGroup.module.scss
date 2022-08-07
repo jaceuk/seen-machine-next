@@ -10,6 +10,10 @@
   box-shadow: var(--button-box-shadow);
   border-radius: var(--border-radius-large);
   width: fit-content;
+
+  @media (min-width: 900px) {
+    margin-bottom: var(--size-large);
+  }
 }
 
 .button {
@@ -20,7 +24,7 @@
   border: none;
   height: 48px;
   font-size: var(--font-size-small);
-  font-weight: var(--font-weight-medium);
+  font-weight: var(--font-weight-semi-bold);
 
   &[aria-selected='true'] {
     background: var(--color-red);

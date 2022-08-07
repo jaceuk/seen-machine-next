@@ -1,0 +1,10 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  z-index: 200;
+  width: 100%;
+  box-shadow: var(--footer-box-shadow);
+  background: var(--nav-background);
+  display: flex;
+  justify-content: center;
+}

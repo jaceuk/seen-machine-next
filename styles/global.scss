@@ -1,8 +1,11 @@
 .wrapper {
-  max-width: 900px;
+  height: 100vh;
+}
+
+.inner-wrapper {
+  max-width: 1375px;
   margin: 0 auto;
   position: relative;
-  height: 100vh;
 }
 
 button {
@@ -20,4 +23,20 @@ button {
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0;
+}
+
+.hide-on-mobile {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: flex;
+  }
+}
+
+.hide-on-desktop {
+  display: flex;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
 }

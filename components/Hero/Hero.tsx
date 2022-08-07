@@ -1,5 +1,5 @@
 import styles from './Hero.module.scss';
-import Header from '@components/Header';
+import Navbar from '@components/NavbarTop';
 import Image from 'next/image';
 import heroPlaceholder from '/images/hero.jpg';
 
@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <div className={styles.hero}>
       <div className={styles.header}>
-        <Header />
+        <Navbar />
       </div>
 
       <Image layout="fill" objectFit="cover" src={heroPlaceholder} alt="" />
