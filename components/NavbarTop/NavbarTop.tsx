@@ -8,18 +8,20 @@ export default function Navbar() {
 
   return (
     <header className={styles.header}>
-      <div className={styles.logo}>
-        {(router.pathname === '/home' || router.pathname === '/_error') && 'Seen Machine'}
-        {router.pathname === '/watched' && 'Watched'}
-        {router.pathname === '/watch-list' && 'Watch list'}
-        {router.pathname === '/recommended' && 'Recommended'}
-      </div>
-
-      <div className={styles.buttons}>
-        <div className="hide-on-mobile">
-          <NavPrimary />
+      <div className={`inner-wrapper ${styles.inner}`}>
+        <div className={styles.logo}>
+          {(router.pathname === '/home' || router.pathname === '/_error') && 'Seen Machine'}
+          {router.pathname === '/watched' && 'Watched'}
+          {router.pathname === '/watch-list' && 'Watch list'}
+          {router.pathname === '/recommended' && 'Recommended'}
         </div>
-        <NavSecondary />
+
+        <div className={styles.buttons}>
+          <div className="hide-on-mobile">
+            <NavPrimary />
+          </div>
+          <NavSecondary />
+        </div>
       </div>
     </header>
   );

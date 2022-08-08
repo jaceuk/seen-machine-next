@@ -24,5 +24,7 @@
 
 .fadeOut {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, var(--color-white) 100%);
+  backdrop-filter: blur(2px);
   height: 100%;
+  box-shadow: var(--footer-box-shadow);
 }

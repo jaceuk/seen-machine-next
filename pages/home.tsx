@@ -16,6 +16,7 @@ export default function Home() {
         shows={
           <>
             <h1 className={styles.title}>Recommended</h1>
+            <div className={styles.subtext}>Your friends thought you might like these</div>
             <div className={styles.results}>
               {trendingShows.results.map((show, index) => (
                 <CardVertical key={index} data={show} />
@@ -23,6 +24,7 @@ export default function Home() {
             </div>
 
             <h1 className={styles.title}>Watched</h1>
+            <div className={styles.subtext}>Your watched these recently</div>
             <div className={styles.results}>
               {trendingMovies.results.map((movie, index) => (
                 <CardVertical key={index} data={movie} />
@@ -30,6 +32,7 @@ export default function Home() {
             </div>
 
             <h1 className={styles.title}>Watch list</h1>
+            <div className={styles.subtext}>You added these to your watch list recently</div>
             <div className={styles.results}>
               {trendingShows.results.map((show, index) => (
                 <CardVertical key={index} data={show} />

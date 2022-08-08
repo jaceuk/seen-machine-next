@@ -1,5 +1,4 @@
 .result {
-  margin-bottom: var(--size-base);
   position: relative;
   background: none;
   border: none;
@@ -21,19 +20,8 @@
 
 .imageContainer {
   position: relative;
-  max-width: 150px;
-  width: 150px;
+  width: 100%;
   aspect-ratio: 1/1.5;
-
-  @media (min-width: 900px) {
-    max-width: 175px;
-    width: 175px;
-  }
-
-  @media (min-width: 1375px) {
-    max-width: 200px;
-    width: 200px;
-  }
 }
 
 .image {
