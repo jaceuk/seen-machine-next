@@ -4,7 +4,6 @@
   background: none;
   border: none;
   padding: 0;
-  box-shadow: var(--card-box-shadow);
   border-radius: var(--border-radius-small);
   display: flex;
   flex-direction: column;
@@ -12,7 +11,7 @@
 }
 
 .title {
-  margin: var(--size-base) var(--size-small);
+  margin: var(--size-small);
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -38,5 +37,9 @@
 }
 
 .image {
-  border-radius: var(--border-radius-small) var(--border-radius-small) 0 0;
+  border-radius: var(--border-radius-small);
+
+  @media (min-width: 900px) {
+    border-radius: var(--border-radius-medium);
+  }
 }
