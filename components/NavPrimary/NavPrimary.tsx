@@ -15,6 +15,7 @@ export default function NavPrimary() {
           <a>
             <Button active={router.pathname === '/home'}>
               <Home />
+              <span className="sr-only">Home</span>
             </Button>
           </a>
         </Link>
@@ -25,7 +26,8 @@ export default function NavPrimary() {
         <Link href="/watched">
           <a>
             <Button active={router.pathname === '/watched'}>
-              <Heart />
+              <SecurityPass />
+              <span className="sr-only">Watched</span>
             </Button>
           </a>
         </Link>
@@ -37,6 +39,7 @@ export default function NavPrimary() {
           <a>
             <Button active={router.pathname === '/watch-list'}>
               <Calendar />
+              <span className="sr-only">Watch list</span>
             </Button>
           </a>
         </Link>
@@ -47,7 +50,8 @@ export default function NavPrimary() {
         <Link href="/recommended">
           <a>
             <Button active={router.pathname === '/recommended'}>
-              <SecurityPass />
+              <Heart />
+              <span className="sr-only">Recommendations</span>
             </Button>
           </a>
         </Link>

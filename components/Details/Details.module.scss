@@ -1,35 +1,27 @@
 .backdrop {
-  aspect-ratio: 16/9;
   width: 100%;
   position: relative;
-}
+  height: 262px;
 
-.title {
-  font-family: 'Poppins', sans-serif;
-  color: var(--color-nearly-black);
+  @media (min-width: 900px) {
+    height: 462px;
+  }
 }
 
 .backButton {
-  background-color: var(--color-white);
-  border: 1px solid var(--color-nearly-black);
-  display: flex;
   padding: var(--size-small);
-  border-radius: var(--border-radius-max);
-  position: absolute;
-  top: var(--size-base);
-  left: var(--size-base);
-  z-index: 10;
+  display: flex;
 }
 
 .main {
   padding: var(--size-base);
+  background: var(--color-white);
 }
 
 .container {
   width: 100vw;
   height: 100vh;
   position: absolute;
-  background: var(--color-white);
   top: 0;
   left: 0;
   right: 0;
@@ -50,4 +42,11 @@
 
 .contents {
   overflow-y: auto;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--size-small);
 }

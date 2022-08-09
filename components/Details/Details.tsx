@@ -13,9 +13,6 @@ export default function Details({ data, handleClose }: IProps) {
   return (
     <SideBar handleClose={handleClose}>
       <>
-        <button className={styles.backButton} onClick={handleClose} aria-label="Back">
-          <NavArrowLeft />
-        </button>
         <div className={styles.backdrop}>
           <Image
             layout="fill"
@@ -25,7 +22,12 @@ export default function Details({ data, handleClose }: IProps) {
           />
         </div>
         <main className={styles.main}>
-          <h1 className={styles.title}>{data.name || data.title}</h1>
+          <div className={styles.title}>
+            <button className={styles.backButton} onClick={handleClose} aria-label="Back">
+              <NavArrowLeft />
+            </button>
+            <h1>{data.name || data.title}</h1>
+          </div>
         </main>
       </>
     </SideBar>

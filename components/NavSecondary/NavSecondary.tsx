@@ -21,6 +21,7 @@ export default function NavSecondary() {
             <a>
               <Button>
                 <User />
+                <span className="sr-only">Profile</span>
               </Button>
             </a>
           </Link>
@@ -29,6 +30,7 @@ export default function NavSecondary() {
         <div className={styles.navItem} onClick={handleToggleDetails}>
           <Button active>
             <SearchIcon />
+            <span className="sr-only">Search</span>
           </Button>
         </div>
       </nav>
