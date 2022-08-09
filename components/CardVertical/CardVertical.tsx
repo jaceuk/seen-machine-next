@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Image from 'next/image';
-import DetailsOverlay from '@components/DetailsOverlay';
+import Details from '@components/Details';
 import posterPlaceholder from '/images/posterPlaceholder.png';
 import styles from './CardVertical.module.scss';
 
@@ -9,6 +9,7 @@ export default function CardVertical({ data }: { data: any }) {
 
   function handleToggleDetails() {
     setShowDetails(!showDetails);
+    document.body.classList.toggle('no-scroll');
   }
 
   return (
@@ -27,7 +28,7 @@ export default function CardVertical({ data }: { data: any }) {
         <div className={`small ${styles.title}`}>{data.name || data.title}</div>
       </button>
 
-      {showDetails && <DetailsOverlay handleClose={handleToggleDetails} data={data} />}
+      {showDetails && <Details handleClose={handleToggleDetails} data={data} />}
     </>
   );
 }

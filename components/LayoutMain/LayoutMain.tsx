@@ -10,7 +10,7 @@ export default function LayoutMain({ children }: IProps) {
   return (
     <div className="wrapper">
       <Hero />
-      <main className={`inner-wrapper ${styles.main}`}>{children}</main>
+      <main className={styles.main}>{children}</main>
       <Footer />
     </div>
   );

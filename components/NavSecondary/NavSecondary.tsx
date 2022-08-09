@@ -1,30 +1,39 @@
+import * as React from 'react';
 import Link from 'next/link';
-import { User, Search } from 'iconoir-react';
+import { User, Search as SearchIcon } from 'iconoir-react';
 import Button from '@components/Button';
 import styles from './NavSecondary.module.scss';
+import Search from '@components/Search';
 
 export default function NavSecondary() {
-  return (
-    <nav className={styles.nav}>
-      <div className={styles.navItem}>
-        <Link href="/profile">
-          <a>
-            <Button>
-              <User />
-            </Button>
-          </a>
-        </Link>
-      </div>
+  const [showDetails, setShowDetails] = React.useState(false);
 
-      <div className={styles.navItem}>
-        <Link href="/search">
-          <a>
-            <Button active>
-              <Search />
-            </Button>
-          </a>
-        </Link>
-      </div>
-    </nav>
+  function handleToggleDetails() {
+    setShowDetails(!showDetails);
+    document.body.classList.toggle('no-scroll');
+  }
+
+  return (
+    <>
+      <nav className={styles.nav}>
+        <div className={styles.navItem}>
+          <Link href="/profile">
+            <a>
+              <Button>
+                <User />
+              </Button>
+            </a>
+          </Link>
+        </div>
+
+        <div className={styles.navItem} onClick={handleToggleDetails}>
+          <Button active>
+            <SearchIcon />
+          </Button>
+        </div>
+      </nav>
+
+      {showDetails && <Search handleClose={handleToggleDetails} />}
+    </>
   );
 }

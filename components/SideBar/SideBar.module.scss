@@ -24,3 +24,31 @@
 .main {
   padding: var(--size-base);
 }
+
+.clickable {
+  flex: 1 1 100%;
+}
+
+.contents {
+  overflow-y: auto;
+  width: 100vw;
+  height: 100vh;
+  box-shadow: var(--side-box-shadow);
+  background: var(--color-white);
+  position: relative;
+  flex: 0 0 100vw;
+
+  @media (min-width: 768px) {
+    flex: 0 0 500px;
+  }
+
+  @media (min-width: 900px) {
+    flex: 0 0 600px;
+  }
+}
+
+.container {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-end;
+}

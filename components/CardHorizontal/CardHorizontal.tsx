@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Image from 'next/image';
-import DetailsOverlay from '@components/DetailsOverlay';
+import Details from '@components/Details';
 import posterPlaceholder from '/images/posterPlaceholder.png';
 import styles from './CardHorizontal.module.css';
 
@@ -30,7 +30,7 @@ export default function CardHorizontal({ data }: { data: any }) {
         </div>
       </button>
 
-      {showDetails && <DetailsOverlay handleClose={handleToggleDetails} data={data} />}
+      {showDetails && <Details handleClose={handleToggleDetails} data={data} />}
     </>
   );
 }
