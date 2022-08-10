@@ -1,27 +1,16 @@
-import * as React from 'react';
-import { useRouter } from 'next/router';
 import { NavArrowLeft } from 'iconoir-react';
 import styles from './SearchForm.module.css';
 
 interface IProps {
   handleClose: () => void;
+  term: string;
+  setTerm: (value: string) => void;
+  handleSubmit: (event: any) => void;
 }
 
-export default function HeaderSearch({ handleClose }: IProps) {
-  const router = useRouter();
-  const [term, setTerm] = React.useState('');
-
-  React.useEffect(() => {
-    setTerm(new URLSearchParams(new URL(window.location.href).search).get('q') || '');
-  }, []);
-
+export default function HeaderSearch({ handleClose, term, setTerm, handleSubmit }: IProps) {
   function handleChange(event) {
     setTerm(event.target.value);
-  }
-
-  function handleSubmit(event) {
-    event.preventDefault();
-    router.replace(`/search?q=${term}`);
   }
 
   return (

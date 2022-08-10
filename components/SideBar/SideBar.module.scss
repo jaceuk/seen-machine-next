@@ -36,6 +36,7 @@
   box-shadow: var(--side-box-shadow);
   position: relative;
   flex: 0 0 100vw;
+  background-color: var(--color-white);
 
   @media (min-width: 768px) {
     flex: 0 0 500px;

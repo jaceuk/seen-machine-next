@@ -1,3 +1,9 @@
 .main {
   padding: var(--size-base);
 }
+
+.results {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-base);
+}

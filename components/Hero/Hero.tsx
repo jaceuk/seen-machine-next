@@ -10,7 +10,7 @@ export default function Hero() {
         <Navbar />
       </div>
 
-      <Image layout="fill" objectFit="cover" src={heroPlaceholder} alt="" />
+      <Image layout="fill" objectFit="cover" priority src={heroPlaceholder} alt="" />
 
       <div className={styles.footer}>
         <div className={styles.fadeOut}></div>
