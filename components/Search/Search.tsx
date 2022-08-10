@@ -11,7 +11,7 @@ export default function Search({ handleClose }: IProps) {
   return (
     <SideBar handleClose={handleClose}>
       <>
-        <HeaderSearch />
+        <HeaderSearch handleClose={handleClose} />
         <main className={styles.main}>
           <h1>search</h1>
         </main>

@@ -60,7 +60,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Jason Newington - Developer, Designer and Geek</title>
+        <title>Seen Machine - Search</title>
       </Head>
 
       <HeaderSearch />

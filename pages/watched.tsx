@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Jason Newington - Developer, Designer and Geek</title>
+        <title>Seen Machine - Watched</title>
       </Head>
       Watched
     </>

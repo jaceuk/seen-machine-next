@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Jason Newington - Developer, Designer and Geek</title>
+        <title>Seen Machine - Profile</title>
       </Head>
 
       <HeaderProfile />

@@ -3,17 +3,17 @@ import { useRouter } from 'next/router';
 import { NavArrowLeft } from 'iconoir-react';
 import styles from './SearchForm.module.css';
 
-export default function HeaderSearch() {
+interface IProps {
+  handleClose: () => void;
+}
+
+export default function HeaderSearch({ handleClose }: IProps) {
   const router = useRouter();
   const [term, setTerm] = React.useState('');
 
   React.useEffect(() => {
     setTerm(new URLSearchParams(new URL(window.location.href).search).get('q') || '');
   }, []);
-
-  function handleBack() {
-    router.back();
-  }
 
   function handleChange(event) {
     setTerm(event.target.value);
@@ -27,7 +27,7 @@ export default function HeaderSearch() {
   return (
     <>
       <header className={styles.header}>
-        <button className={styles.backButton} onClick={handleBack} aria-label="Back">
+        <button className={styles.backButton} onClick={handleClose} aria-label="Back">
           <NavArrowLeft />
         </button>
         <form className={styles.form} onSubmit={handleSubmit}>
