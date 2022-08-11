@@ -1,3 +1,7 @@
-export default function Layout({ children }: { children: React.ReactNode }) {
+interface LayoutProps {
+  children: React.ReactNode;
+}
+
+export default function Layout({ children }: LayoutProps) {
   return <div className="wrapper">{children}</div>;
 }

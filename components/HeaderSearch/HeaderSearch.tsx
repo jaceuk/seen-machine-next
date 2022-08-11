@@ -1,14 +1,14 @@
 import { NavArrowLeft } from 'iconoir-react';
 import styles from './SearchForm.module.css';
 
-interface IProps {
+interface HeaderSearchProps {
   handleClose: () => void;
   term: string;
   setTerm: (value: string) => void;
   handleSubmit: (event: any) => void;
 }
 
-export default function HeaderSearch({ handleClose, term, setTerm, handleSubmit }: IProps) {
+export default function HeaderSearch({ handleClose, term, setTerm, handleSubmit }: HeaderSearchProps) {
   function handleChange(event) {
     setTerm(event.target.value);
   }

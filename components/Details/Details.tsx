@@ -4,12 +4,12 @@ import { NavArrowLeft } from 'iconoir-react';
 import backdropPlaceholder from '/images/backdropPlaceholder.png';
 import styles from './Details.module.scss';
 
-interface IProps {
+interface DetailsProps {
   data: any;
   handleClose: () => void;
 }
 
-export default function Details({ data, handleClose }: IProps) {
+export default function Details({ data, handleClose }: DetailsProps) {
   return (
     <SideBar handleClose={handleClose}>
       <>

@@ -1,10 +1,11 @@
 import * as React from 'react';
-import InfiniteScroll from 'react-infinite-scroller';
 import SideBar from '@components/SideBar';
+import getData from './utils/getData';
 import styles from './Search.module.scss';
 import HeaderSearch from '@components/HeaderSearch';
 import TabGroup from '@components/TabGroup';
-import CardHorizontal from '@components/CardHorizontal';
+import Shows from './components/Shows';
+import Movies from './components/Movies';
 
 interface IProps {
   handleClose: () => void;
@@ -15,29 +16,7 @@ export default function Search({ handleClose }: IProps) {
   const [shows, setShows] = React.useState<any>([]);
   const [movies, setMovies] = React.useState<any>([]);
 
-  async function getData(prevResults: any, term: string | string[], type: string, page: number) {
-    const response = await fetch(
-      `https://api.themoviedb.org/3/search/${type}?api_key=${process.env.NEXT_PUBLIC_TMDB_API_KEY}&query=${term}&page=${page}`,
-    );
-    const data = await response.json();
-
-    if (response.ok) {
-      const results = [...prevResults, ...data.results];
-
-      return {
-        status: response.status,
-        page: data.page,
-        totalPages: data.total_pages,
-        totalResults: data.total_results,
-        results: results,
-      };
-    }
-
-    throw new Error(data.status_message);
-  }
-
   async function fetchMoreShows(page: number) {
-    console.log('more');
     const moreShows = await getData(shows.results, term, 'tv', page);
     setShows(moreShows);
   }
@@ -70,40 +49,14 @@ export default function Search({ handleClose }: IProps) {
               totalShows={shows.totalResults}
               totalMovies={movies.totalResults}
               shows={
-                <InfiniteScroll
-                  pageStart={1}
-                  loadMore={fetchMoreShows}
-                  hasMore={shows.page < shows.totalPages}
-                  loader={
-                    <div className="loader" key={0}>
-                      Loading ...
-                    </div>
-                  }
-                  className={styles.results}
-                >
-                  <div className={styles.results}>
-                    {shows.results.map((result, index) => (
-                      <CardHorizontal key={index} data={result} />
-                    ))}
-                  </div>
-                </InfiniteScroll>
+                <div className={styles.results}>
+                  <Shows shows={shows} fetchMoreShows={fetchMoreShows} />
+                </div>
               }
               movies={
-                <InfiniteScroll
-                  pageStart={1}
-                  loadMore={fetchMoreMovies}
-                  hasMore={movies.page < movies.totalPages}
-                  loader={
-                    <div className="loader" key={0}>
-                      Loading ...
-                    </div>
-                  }
-                  className={styles.results}
-                >
-                  {movies.results.map((result, index) => (
-                    <CardHorizontal key={index} data={result} />
-                  ))}
-                </InfiniteScroll>
+                <div className={styles.results}>
+                  <Movies movies={movies} fetchMoreMovies={fetchMoreMovies} />
+                </div>
               }
             />
           </main>

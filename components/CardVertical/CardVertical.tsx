@@ -4,7 +4,11 @@ import Details from '@components/Details';
 import posterPlaceholder from '/images/posterPlaceholder.png';
 import styles from './CardVertical.module.scss';
 
-export default function CardVertical({ data }: { data: any }) {
+interface CardVerticalProps {
+  data: any;
+}
+
+export default function CardVertical({ data }: CardVerticalProps) {
   const [showDetails, setShowDetails] = React.useState(false);
 
   function handleToggleDetails() {

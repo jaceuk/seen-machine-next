@@ -1,10 +1,10 @@
 import styles from './Button.module.scss';
 
-interface IChildren {
+interface ButtonProps {
   children: React.ReactNode;
   active?: boolean;
 }
 
-export default function Button({ children, active }: IChildren) {
+export default function Button({ children, active }: ButtonProps) {
   return <span className={`${styles.button} ${active ? styles.active : ''}`}>{children}</span>;
 }
