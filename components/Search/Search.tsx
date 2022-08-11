@@ -2,7 +2,7 @@ import * as React from 'react';
 import SideBar from '@components/SideBar';
 import getData from './utils/getData';
 import styles from './Search.module.scss';
-import HeaderSearch from '@components/HeaderSearch';
+import HeaderSearch from '@components/Search/components/HeaderSearch';
 import TabGroup from '@components/TabGroup';
 import Shows from './components/Shows';
 import Movies from './components/Movies';
