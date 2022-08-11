@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import { default as HomePage } from '@components/HomePage';
 
 export default function Home() {
   return (
@@ -8,7 +7,9 @@ export default function Home() {
         <title>Seen Machine</title>
       </Head>
 
-      <HomePage />
+      <div>
+        <h1>Create account</h1>
+      </div>
     </>
   );
 }

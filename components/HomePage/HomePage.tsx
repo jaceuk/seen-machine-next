@@ -2,9 +2,9 @@ import TabGroup from '@components/TabGroup';
 import CardVertical from '@components/CardVertical';
 import trendingShows from '@data/trendingShows.json';
 import trendingMovies from '@data/trendingMovies.json';
-import styles from './Home.module.scss';
+import styles from './HomePage.module.scss';
 
-export default function Home() {
+export default function HomePage() {
   return (
     <TabGroup
       shows={
