@@ -1,10 +1,7 @@
 import Button from '@components/Button';
 import IconButton from '@components/IconButton';
 import Link from 'next/link';
-import { NavArrowLeft } from 'iconoir-react';
 import styles from './CreateAccount.module.scss';
-import AccountHeader from '@components/AccountHeader';
-import Hero from './components/Hero';
 
 export default function CreateAccount() {
   return (
@@ -14,14 +11,13 @@ export default function CreateAccount() {
         <div>
           <h1>Create account</h1>
           <p>Please enter your name and email address.</p>
+          <p>Your password should be at least 8 characters long and contain at least 1 number.</p>
         </div>
       </main>
       <div className={styles.buttons}>
         <Link href="/">
           <a>
-            <IconButton>
-              <NavArrowLeft />
-            </IconButton>
+            <IconButton>Cancel</IconButton>
           </a>
         </Link>
 
