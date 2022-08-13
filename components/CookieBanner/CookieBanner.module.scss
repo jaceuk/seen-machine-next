@@ -1,0 +1,30 @@
+.container {
+  background: var(--color-white);
+  padding: var(--size-base);
+  border-radius: var(--border-radius-small);
+  box-shadow: var(--header-box-shadow);
+  position: absolute;
+  z-index: 500;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-base);
+  margin: var(--size-base);
+
+  @media (min-width: 768px) {
+    width: 50%;
+  }
+
+  @media (min-width: 900px) {
+    width: 35%;
+  }
+
+  p {
+    margin-bottom: var(--size-base);
+  }
+
+  button {
+    margin: 0 auto;
+    width: auto;
+  }
+}
