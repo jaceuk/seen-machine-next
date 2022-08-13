@@ -28,12 +28,12 @@ export default function NavSecondary() {
         </div>
 
         <div className={styles.navItem} onClick={handleToggleDetails}>
-          <a>
+          <button>
             <Button active>
               <SearchIcon />
               <span className="sr-only">Search</span>
             </Button>
-          </a>
+          </button>
         </div>
       </nav>
 

@@ -1,14 +1,14 @@
-import { NavArrowLeft } from 'iconoir-react';
-import styles from './SearchForm.module.css';
+import { NavArrowLeft, Search } from 'iconoir-react';
+import styles from './SearchHeader.module.scss';
 
-interface HeaderSearchProps {
+interface SearchHeaderProps {
   handleClose: () => void;
   term: string;
   setTerm: (value: string) => void;
   handleSubmit: (event: any) => void;
 }
 
-export default function HeaderSearch({ handleClose, term, setTerm, handleSubmit }: HeaderSearchProps) {
+export default function SearchHeader({ handleClose, term, setTerm, handleSubmit }: SearchHeaderProps) {
   function handleChange(event) {
     setTerm(event.target.value);
   }
@@ -31,8 +31,8 @@ export default function HeaderSearch({ handleClose, term, setTerm, handleSubmit 
             onChange={handleChange}
             placeholder="Search TV shows &amp; movies"
           />
-          <button type="submit" className="sr-only">
-            Search
+          <button type="submit">
+            <Search />
           </button>
         </form>
       </header>

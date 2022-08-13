@@ -2,7 +2,7 @@ import * as React from 'react';
 import SideBar from '@components/SideBar';
 import getData from './utils/getData';
 import styles from './Search.module.scss';
-import HeaderSearch from '@components/Search/components/HeaderSearch';
+import SearchHeader from '@components/Search/components/SearchHeader';
 import TabGroup from '@components/TabGroup';
 import Shows from './components/Shows';
 import Movies from './components/Movies';
@@ -42,7 +42,7 @@ export default function Search({ handleClose }: IProps) {
   return (
     <SideBar handleClose={handleClose}>
       <>
-        <HeaderSearch handleClose={handleClose} term={term} setTerm={setTerm} handleSubmit={handleSubmit} />
+        <SearchHeader handleClose={handleClose} term={term} setTerm={setTerm} handleSubmit={handleSubmit} />
         {shows.results && movies.results && (
           <main className={styles.main}>
             <TabGroup
