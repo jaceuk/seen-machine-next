@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { Home, Heart, Calendar, SecurityPass } from 'iconoir-react';
-import Button from '@components/Button';
+import Button from '@components/IconButton';
 import styles from './NavPrimary.module.scss';
 
 export default function NavPrimary() {

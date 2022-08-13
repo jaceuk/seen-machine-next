@@ -11,7 +11,7 @@ import '@styles/global.scss';
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
 
-  if (router.pathname.startsWith('/search') || router.pathname.startsWith('/profile') || router.pathname === '/') {
+  if (router.pathname.startsWith('/account') || router.pathname === '/') {
     return (
       <Layout>
         <Component {...pageProps}></Component>

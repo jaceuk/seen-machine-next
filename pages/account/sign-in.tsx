@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import SignIn from '@components/SignIn';
 
 export default function Home() {
   return (
@@ -7,9 +8,7 @@ export default function Home() {
         <title>Seen Machine</title>
       </Head>
 
-      <div>
-        <h1>Sign in</h1>
-      </div>
+      <SignIn />
     </>
   );
 }

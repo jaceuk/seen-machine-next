@@ -1,27 +1,31 @@
 import Button from '@components/Button';
+import IconButton from '@components/IconButton';
 import Link from 'next/link';
-import styles from './Home.module.scss';
+import styles from './SignIn.module.scss';
+import { NavArrowLeft } from 'iconoir-react/dist';
 
-export default function Home() {
+export default function SignIn() {
   return (
     <div className={styles.content}>
       <main className={styles.main}>
         <div className={styles.logo}>Seen Machine</div>
         <div>
-          <h1>Recommend TV shows and movies to your friends</h1>
-          <div className={styles.subtitle}>and keep track of what you&apos;ve watched</div>
+          <h1>Sign in</h1>
+          <p>Please enter your name and email address.</p>
         </div>
       </main>
       <div className={styles.buttons}>
-        <Link href="/account/create">
+        <Link href="/">
           <a>
-            <Button active>Create account</Button>
+            <IconButton>
+              <NavArrowLeft />
+            </IconButton>
           </a>
         </Link>
 
         <Link href="/account/sign-in">
           <a>
-            <Button>Sign in</Button>
+            <Button active>Sign in</Button>
           </a>
         </Link>
       </div>

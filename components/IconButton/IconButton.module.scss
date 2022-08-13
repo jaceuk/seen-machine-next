@@ -1,14 +1,13 @@
 .button {
   background: var(--color-white);
-  padding: var(--size-base) var(--size-large);
+  padding: var(--size-small) var(--size-medium);
   display: flex;
   align-items: center;
   justify-content: center;
   border: none;
   box-shadow: var(--button-box-shadow);
   border-radius: var(--border-radius-large);
-  font-size: var(--font-size-small);
-  font-weight: var(--font-weight-semi-bold);
+  height: 100%;
 
   &.active {
     background: var(--color-red);

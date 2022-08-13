@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import CreateAccount from '@components/CreateAccount';
 
 export default function Home() {
   return (
@@ -7,9 +8,7 @@ export default function Home() {
         <title>Seen Machine</title>
       </Head>
 
-      <div>
-        <h1>Create account</h1>
-      </div>
+      <CreateAccount />
     </>
   );
 }

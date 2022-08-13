@@ -10,7 +10,6 @@
 
 .main {
   padding: var(--size-base);
-  margin-top: -88px;
   z-index: 100;
   position: relative;
   display: flex;
@@ -23,7 +22,6 @@
   }
 
   @media (min-width: 768px) {
-    margin-top: 0;
     margin-bottom: 0;
     gap: var(--size-extra-large);
     padding: var(--size-base) 0 var(--size-base) var(--size-base);
@@ -49,7 +47,9 @@
 .buttons {
   position: absolute;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
   gap: var(--size-base);
   bottom: 0;
   width: 100%;
@@ -57,7 +57,7 @@
 
   @media (min-width: 768px) {
     position: relative;
-    flex-direction: row;
+    justify-content: flex-start;
   }
 }
 

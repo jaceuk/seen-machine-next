@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Link from 'next/link';
 import { User, Search as SearchIcon } from 'iconoir-react';
-import Button from '@components/Button';
+import Button from '@components/IconButton';
 import styles from './NavSecondary.module.scss';
 import Search from '@components/Search';
 
