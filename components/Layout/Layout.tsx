@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router';
 import Hero from './components/Hero';
 import styles from './Layout.module.scss';
 
@@ -6,12 +7,16 @@ interface LayoutProps {
 }
 
 export default function Layout({ children }: LayoutProps) {
+  const router = useRouter();
+
   return (
     <div className="wrapper">
       <div className={styles.container}>
-        <Hero />
+        <div className={`${styles.image} ${router.pathname !== '/' ? 'hide-on-mobile' : ''}`}>
+          <Hero />
+        </div>
 
-        {children}
+        <div className={styles.content}>{children}</div>
       </div>
     </div>
   );

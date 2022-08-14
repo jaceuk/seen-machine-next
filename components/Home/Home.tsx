@@ -4,7 +4,7 @@ import styles from './Home.module.scss';
 
 export default function Home() {
   return (
-    <div className={styles.content}>
+    <div>
       <main className={styles.main}>
         <div className={styles.logo}>Seen Machine</div>
         <div>
@@ -13,15 +13,15 @@ export default function Home() {
         </div>
       </main>
       <div className={styles.buttons}>
-        <Link href="/account/create">
-          <a>
-            <Button active>Create account</Button>
-          </a>
-        </Link>
-
         <Link href="/account/sign-in">
           <a>
             <Button>Sign in</Button>
+          </a>
+        </Link>
+
+        <Link href="/account/create">
+          <a>
+            <Button active>Create account</Button>
           </a>
         </Link>
       </div>
