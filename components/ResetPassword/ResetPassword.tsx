@@ -4,23 +4,14 @@ import FormField from '@components/FormField';
 import IconButton from '@components/IconButton';
 import Link from 'next/link';
 import styles from './ResetPassword.module.scss';
+import useAccountForm from '@hooks/useAccountForm';
 
 export default function ResetPassword() {
-  const [inputs, setInputs] = React.useState({
-    email: '',
-  });
+  const [inputValues, handleChange] = useAccountForm();
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    console.log(inputs);
   }
-
-  const handleChange = (element: React.ChangeEvent<HTMLInputElement>) => {
-    setInputs((prev) => ({
-      ...prev,
-      [element.target.id]: element.target.value,
-    }));
-  };
 
   return (
     <div>
@@ -30,7 +21,13 @@ export default function ResetPassword() {
           <div className={styles.fields}>
             <h1>Reset password</h1>
             <p>Please enter your email address and password to sign in to your account.</p>
-            <FormField onChange={handleChange} value={inputs.email} label="Email address" id="email" type="email" />
+            <FormField
+              onChange={handleChange}
+              value={inputValues.email}
+              label="Email address"
+              id="email"
+              type="email"
+            />
           </div>
         </main>
         <div className={styles.buttons}>

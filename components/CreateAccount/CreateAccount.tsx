@@ -4,26 +4,15 @@ import FormField from '@components/FormField';
 import IconButton from '@components/IconButton';
 import Link from 'next/link';
 import styles from './CreateAccount.module.scss';
+import useAccountForm from '@hooks/useAccountForm';
 
 export default function CreateAccount() {
-  const [inputs, setInputs] = React.useState({
-    name: '',
-    email: '',
-    password: '',
-    confirmPassword: '',
-  });
+  const [inputValues, handleChange] = useAccountForm();
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    console.log(inputs);
+    console.log(inputValues);
   }
-
-  const handleChange = (element: React.ChangeEvent<HTMLInputElement>) => {
-    setInputs((prev) => ({
-      ...prev,
-      [element.target.id]: element.target.value,
-    }));
-  };
 
   return (
     <div>
@@ -35,19 +24,31 @@ export default function CreateAccount() {
 
             <p>Please enter your name and email address.</p>
 
-            <FormField onChange={handleChange} value={inputs.name} label="Name" id="name" type="text" />
-
-            <FormField onChange={handleChange} value={inputs.email} label="Email address" id="email" type="email" />
-
-            <p>Your password should be at least 8 characters long and contain at least 1 number.</p>
-
-            <FormField onChange={handleChange} value={inputs.password} label="Password" id="password" type="password" />
+            <FormField onChange={handleChange} value={inputValues.name} label="Name" id="name" type="text" />
 
             <FormField
               onChange={handleChange}
-              value={inputs.confirmPassword}
+              value={inputValues.email}
+              label="Email address"
+              id="email"
+              type="email"
+            />
+
+            <p>Your password should be at least 8 characters long and contain at least 1 number.</p>
+
+            <FormField
+              onChange={handleChange}
+              value={inputValues.password}
+              label="Password"
+              id="password"
+              type="password"
+            />
+
+            <FormField
+              onChange={handleChange}
+              value={inputValues.confirmPassword}
               label="Confirm password"
-              id="confirm-password"
+              id="confirmPassword"
               type="password"
             />
           </div>

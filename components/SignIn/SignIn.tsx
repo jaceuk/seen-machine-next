@@ -4,24 +4,14 @@ import Button from '@components/Button';
 import IconButton from '@components/IconButton';
 import FormField from '@components/FormField';
 import styles from './SignIn.module.scss';
+import useAccountForm from '@hooks/useAccountForm';
 
 export default function SignIn() {
-  const [inputs, setInputs] = React.useState({
-    email: '',
-    password: '',
-  });
+  const [inputValues, handleChange] = useAccountForm();
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    console.log(inputs);
   }
-
-  const handleChange = (element: React.ChangeEvent<HTMLInputElement>) => {
-    setInputs((prev) => ({
-      ...prev,
-      [element.target.id]: element.target.value,
-    }));
-  };
 
   return (
     <div>
@@ -34,9 +24,21 @@ export default function SignIn() {
 
             <p>Please enter your email address and password to sign in to your account.</p>
 
-            <FormField onChange={handleChange} value={inputs.email} label="Email address" id="email" type="email" />
+            <FormField
+              onChange={handleChange}
+              value={inputValues.email}
+              label="Email address"
+              id="email"
+              type="email"
+            />
 
-            <FormField onChange={handleChange} value={inputs.password} label="Password" id="password" type="password" />
+            <FormField
+              onChange={handleChange}
+              value={inputValues.password}
+              label="Password"
+              id="password"
+              type="password"
+            />
 
             <Link href="/account/reset-password">
               <a className={styles.link}>Forgotten your password?</a>
