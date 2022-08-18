@@ -7,7 +7,7 @@ import styles from './CreateAccount.module.scss';
 import useAccountForm from '@hooks/useAccountForm';
 
 export default function CreateAccount() {
-  const [inputValues, handleChange] = useAccountForm();
+  const [inputValues, handleChange, handleBlur, inputErrors] = useAccountForm();
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -24,7 +24,15 @@ export default function CreateAccount() {
 
             <p>Please enter your name and email address.</p>
 
-            <FormField onChange={handleChange} value={inputValues.name} label="Name" id="name" type="text" />
+            <FormField
+              onChange={handleChange}
+              value={inputValues.name}
+              label="Name"
+              id="name"
+              type="text"
+              onBlur={handleBlur}
+              error={inputErrors.name && 'Please enter your name'}
+            />
 
             <FormField
               onChange={handleChange}
@@ -32,6 +40,8 @@ export default function CreateAccount() {
               label="Email address"
               id="email"
               type="email"
+              onBlur={handleBlur}
+              error={inputErrors.email && 'Please enter your email address'}
             />
 
             <p>Your password should be at least 8 characters long and contain at least 1 number.</p>
@@ -42,6 +52,8 @@ export default function CreateAccount() {
               label="Password"
               id="password"
               type="password"
+              onBlur={handleBlur}
+              error={inputErrors.password && 'Please enter your password'}
             />
 
             <FormField
@@ -50,6 +62,8 @@ export default function CreateAccount() {
               label="Confirm password"
               id="confirmPassword"
               type="password"
+              onBlur={handleBlur}
+              error={inputErrors.confirmPassword && 'Please enter your email address'}
             />
           </div>
         </main>

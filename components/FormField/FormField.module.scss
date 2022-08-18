@@ -16,3 +16,18 @@
     padding: calc(var(--size-small) * 1.5) var(--size-base);
   }
 }
+
+.error {
+  label {
+    color: var(--color-red);
+  }
+
+  input {
+    border-color: var(--color-red);
+  }
+
+  .message {
+    color: var(--color-red);
+    font-size: var(--font-size-small);
+  }
+}

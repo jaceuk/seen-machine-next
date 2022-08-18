@@ -8,6 +8,13 @@ function useAccountForm() {
     confirmPassword: '',
   });
 
+  const [inputErrors, setInputErrors] = React.useState({
+    name: false,
+    email: false,
+    password: false,
+    confirmPassword: false,
+  });
+
   const handleChange = React.useCallback((element: React.ChangeEvent<HTMLInputElement>) => {
     setInputValues((prev) => ({
       ...prev,
@@ -15,7 +22,14 @@ function useAccountForm() {
     }));
   }, []);
 
-  return [inputValues, handleChange];
+  function handleBlur(element: React.ChangeEvent<HTMLInputElement>) {
+    setInputErrors((prev) => ({
+      ...prev,
+      [element.target.id]: element.target.value === '',
+    }));
+  }
+
+  return [inputValues, handleChange, handleBlur, inputErrors] as const;
 }
 
 export default useAccountForm;

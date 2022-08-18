@@ -7,7 +7,7 @@ import styles from './SignIn.module.scss';
 import useAccountForm from '@hooks/useAccountForm';
 
 export default function SignIn() {
-  const [inputValues, handleChange] = useAccountForm();
+  const [inputValues, handleChange, handleBlur, inputErrors] = useAccountForm();
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -30,6 +30,8 @@ export default function SignIn() {
               label="Email address"
               id="email"
               type="email"
+              onBlur={handleBlur}
+              error={inputErrors.email && 'Please enter your email address'}
             />
 
             <FormField
@@ -38,6 +40,8 @@ export default function SignIn() {
               label="Password"
               id="password"
               type="password"
+              onBlur={handleBlur}
+              error={inputErrors.password && 'Please enter your password'}
             />
 
             <Link href="/account/reset-password">

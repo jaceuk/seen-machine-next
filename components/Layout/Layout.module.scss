@@ -5,13 +5,12 @@
 
   @media (min-width: 768px) {
     flex-direction: row-reverse;
-    justify-content: space-between;
     align-items: stretch;
   }
 }
 
 .content {
-  width: 100%;
+  max-width: calc(1375px / 2);
 
   @media (min-width: 768px) {
     width: 50%;

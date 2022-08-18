@@ -7,7 +7,7 @@ import styles from './ResetPassword.module.scss';
 import useAccountForm from '@hooks/useAccountForm';
 
 export default function ResetPassword() {
-  const [inputValues, handleChange] = useAccountForm();
+  const [inputValues, handleChange, handleBlur, inputErrors] = useAccountForm();
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -27,6 +27,8 @@ export default function ResetPassword() {
               label="Email address"
               id="email"
               type="email"
+              onBlur={handleBlur}
+              error={inputErrors.email && 'Please enter your email address'}
             />
           </div>
         </main>
