@@ -63,7 +63,7 @@ export default function CreateAccount() {
               id="confirmPassword"
               type="password"
               onBlur={handleBlur}
-              error={inputErrors.confirmPassword && 'Please enter your email address'}
+              error={inputErrors.confirmPassword && 'Please confirm your password'}
             />
           </div>
         </main>
