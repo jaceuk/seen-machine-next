@@ -1,21 +1,26 @@
-import * as React from 'react';
 import Link from 'next/link';
+import { useForm } from 'react-hook-form';
 import Button from '@components/Button';
 import IconButton from '@components/IconButton';
-import FormField from '@components/FormField';
 import styles from './SignIn.module.scss';
-import useAccountForm from '@hooks/useAccountForm';
+
+type FormValues = {
+  email: string;
+  password: string;
+};
 
 export default function SignIn() {
-  const [inputValues, handleChange, handleBlur, inputErrors] = useAccountForm();
-
-  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-  }
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<FormValues>({ mode: 'onBlur' });
+  const onSubmit = handleSubmit((data) => alert(JSON.stringify(data)));
+  console.log(errors);
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={onSubmit}>
         <main className={styles.main}>
           <div className={styles.logo}>Seen Machine</div>
 
@@ -24,25 +29,38 @@ export default function SignIn() {
 
             <p>Please enter your email address and password to sign in to your account.</p>
 
-            <FormField
-              onChange={handleChange}
-              value={inputValues.email}
-              label="Email address"
-              id="email"
-              type="email"
-              onBlur={handleBlur}
-              error={inputErrors.email && 'Please enter your email address'}
-            />
+            <div className={`form-field ${errors?.email && 'error'}`}>
+              <label htmlFor="email">Email address</label>
+              <input
+                id="email"
+                type="email"
+                aria-invalid={errors.email ? 'true' : 'false'}
+                {...register('email', {
+                  required: 'Please enter your email address',
+                  pattern: { value: /^\S+@\S+$/i, message: 'Please enter a valid email address' },
+                })}
+              ></input>
+              {errors?.email && (
+                <div className="message" role="alert">
+                  {errors.email.message}
+                </div>
+              )}
+            </div>
 
-            <FormField
-              onChange={handleChange}
-              value={inputValues.password}
-              label="Password"
-              id="password"
-              type="password"
-              onBlur={handleBlur}
-              error={inputErrors.password && 'Please enter your password'}
-            />
+            <div className={`form-field ${errors?.password && 'error'}`}>
+              <label htmlFor="password">Password</label>
+              <input
+                id="password"
+                type="password"
+                aria-invalid={errors.password ? 'true' : 'false'}
+                {...register('password', { required: 'Please enter your password' })}
+              ></input>
+              {errors?.password && (
+                <div className="message" role="alert">
+                  {errors.password.message}
+                </div>
+              )}
+            </div>
 
             <Link href="/account/reset-password">
               <a className={styles.link}>Forgotten your password?</a>

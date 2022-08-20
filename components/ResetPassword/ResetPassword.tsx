@@ -1,35 +1,49 @@
 import * as React from 'react';
+import { useForm } from 'react-hook-form';
 import Button from '@components/Button';
-import FormField from '@components/FormField';
 import IconButton from '@components/IconButton';
 import Link from 'next/link';
 import styles from './ResetPassword.module.scss';
-import useAccountForm from '@hooks/useAccountForm';
+
+type FormValues = {
+  email: string;
+};
 
 export default function ResetPassword() {
-  const [inputValues, handleChange, handleBlur, inputErrors] = useAccountForm();
-
-  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-  }
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<FormValues>({ mode: 'onBlur' });
+  const onSubmit = handleSubmit((data) => alert(JSON.stringify(data)));
+  console.log(errors);
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={onSubmit}>
         <main className={styles.main}>
           <div className={styles.logo}>Seen Machine</div>
           <div className={styles.fields}>
             <h1>Reset password</h1>
             <p>Please enter your email address and password to sign in to your account.</p>
-            <FormField
-              onChange={handleChange}
-              value={inputValues.email}
-              label="Email address"
-              id="email"
-              type="email"
-              onBlur={handleBlur}
-              error={inputErrors.email && 'Please enter your email address'}
-            />
+
+            <div className={`form-field ${errors?.email && 'error'}`}>
+              <label htmlFor="email">Email address</label>
+              <input
+                id="email"
+                type="email"
+                aria-invalid={errors.email ? 'true' : 'false'}
+                {...register('email', {
+                  required: 'Please enter your email address',
+                  pattern: { value: /^\S+@\S+$/i, message: 'Please enter a valid email address' },
+                })}
+              ></input>
+              {errors?.email && (
+                <div className="message" role="alert">
+                  {errors.email.message}
+                </div>
+              )}
+            </div>
           </div>
         </main>
         <div className={styles.buttons}>
