@@ -10,10 +10,10 @@ export default function NavPrimary() {
   return (
     <nav className={styles.nav}>
       <div className={styles.navItem}>
-        <div className={`${styles.pill} ${router.pathname === '/home' ? styles.active : ''}`} />
-        <Link href="/home">
+        <div className={`${styles.pill} ${router.pathname === '/' ? styles.active : ''}`} />
+        <Link href="/">
           <a>
-            <Button active={router.pathname === '/home'}>
+            <Button active={router.pathname === '/'}>
               <Home />
               <span className="sr-only">Home</span>
             </Button>

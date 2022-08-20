@@ -1,29 +1,15 @@
 import { AppProps } from 'next/app';
-import { useRouter } from 'next/router';
-import LayoutMain from '@components/LayoutMain';
-import Layout from '@components/Layout';
-import CookieBanner from '@components/CookieBanner';
+import { SessionProvider } from 'next-auth/react';
 import '@styles/vars.css';
 import '@styles/normalize.css';
 import '@styles/reset.css';
 import '@styles/typography.scss';
 import '@styles/global.scss';
 
-export default function App({ Component, pageProps }: AppProps) {
-  const router = useRouter();
-
-  if (router.pathname.startsWith('/account') || router.pathname === '/') {
-    return (
-      <Layout>
-        <CookieBanner />
-        <Component {...pageProps}></Component>
-      </Layout>
-    );
-  }
-
+export default function App({ Component, pageProps: { session, ...pageProps } }: AppProps) {
   return (
-    <LayoutMain>
-      <Component {...pageProps} />
-    </LayoutMain>
+    <SessionProvider session={session}>
+      <Component {...pageProps}></Component>
+    </SessionProvider>
   );
 }
