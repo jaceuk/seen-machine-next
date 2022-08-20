@@ -5,11 +5,10 @@ import HomePage from '@components/HomePage';
 import Layout from '@components/Layout';
 import LayoutSignIn from '@components/LayoutSignIn';
 import CookieBanner from '@components/CookieBanner';
+import Loading from '@components/Loading';
 
 export default function Home() {
-  const { data: session } = useSession();
-
-  console.log(session);
+  const { data: session, status } = useSession();
 
   return (
     <>
@@ -17,12 +16,16 @@ export default function Home() {
         <title>Seen Machine</title>
       </Head>
 
-      {!session ? (
+      {status === 'loading' && <Loading />}
+
+      {status !== 'authenticated' && (
         <LayoutSignIn>
           <CookieBanner />
           <SignIn />
         </LayoutSignIn>
-      ) : (
+      )}
+
+      {status === 'authenticated' && (
         <Layout>
           <HomePage />
         </Layout>

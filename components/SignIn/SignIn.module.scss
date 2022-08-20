@@ -39,16 +39,15 @@
 .buttons {
   position: absolute;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
-  gap: var(--size-base);
+  gap: var(--size-large);
   bottom: 0;
   width: 100%;
   padding: var(--size-base);
 
   @media (min-width: 768px) {
     position: relative;
-    flex-direction: row;
     justify-content: flex-start;
   }
 
