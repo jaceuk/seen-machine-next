@@ -40,7 +40,7 @@
   position: absolute;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   gap: var(--size-base);
   bottom: 0;
   width: 100%;
@@ -50,6 +50,15 @@
     position: relative;
     flex-direction: row;
     justify-content: flex-start;
+  }
+
+  button {
+    width: auto;
+    padding: 0;
+
+    @media (min-width: 768px) {
+      width: auto;
+    }
   }
 }
 
