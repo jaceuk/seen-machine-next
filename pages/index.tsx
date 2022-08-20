@@ -9,6 +9,8 @@ import CookieBanner from '@components/CookieBanner';
 export default function Home() {
   const { data: session } = useSession();
 
+  console.log(session);
+
   return (
     <>
       <Head>
