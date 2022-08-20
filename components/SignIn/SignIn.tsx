@@ -16,7 +16,6 @@ export default function SignIn() {
     formState: { errors },
   } = useForm<FormValues>({ mode: 'onBlur' });
   const onSubmit = handleSubmit((data) => alert(JSON.stringify(data)));
-  console.log(errors);
 
   return (
     <div>

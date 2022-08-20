@@ -20,7 +20,6 @@ export default function CreateAccount() {
     formState: { errors },
   } = useForm<FormValues>({ mode: 'onBlur' });
   const onSubmit = handleSubmit((data) => alert(JSON.stringify(data)));
-  console.log(errors);
 
   return (
     <div>
