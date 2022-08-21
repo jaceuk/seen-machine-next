@@ -1,6 +1,5 @@
 .main {
   padding: var(--size-base);
-  margin-top: -88px;
   z-index: 100;
   position: relative;
   display: flex;
@@ -12,13 +11,13 @@
   }
 
   @media (min-width: 768px) {
-    margin-top: 0;
-
     gap: var(--size-extra-large);
     padding: var(--size-base) 0 var(--size-base) var(--size-base);
   }
 
   h1 {
+    margin-bottom: var(--size-base);
+
     @media (min-width: 768px) {
       font-size: var(--font-size-super);
       line-height: 1.05;
@@ -33,18 +32,19 @@
   }
 }
 
-.buttons {
+.providers {
   display: flex;
   flex-direction: column;
-
+  justify-content: center;
   gap: var(--size-large);
   bottom: 0;
-
+  width: 100%;
   padding: var(--size-base);
 
   @media (min-width: 768px) {
     position: relative;
     justify-content: flex-start;
+    padding: var(--size-base) var(--size-extra-small) var(--size-base) var(--size-base);
   }
 
   button {
@@ -54,6 +54,28 @@
     @media (min-width: 768px) {
       width: auto;
     }
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-base);
+}
+
+.hr {
+  width: 75%;
+  display: flex;
+
+  &:before {
+    content: 'or';
+    position: relative;
+    top: calc(var(--size-medium) / 2 * -1);
+    margin: 0 auto;
+    text-align: center;
+    background: var(--color-white);
+    padding: 0 var(--size-medium);
+    height: var(--size-medium);
   }
 }
 

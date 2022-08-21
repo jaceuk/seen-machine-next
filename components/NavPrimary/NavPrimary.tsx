@@ -34,10 +34,10 @@ export default function NavPrimary() {
       </div>
 
       <div className={styles.navItem}>
-        <div className={`${styles.pill} ${router.pathname === '/watch-list' ? styles.active : ''}`} />
-        <Link href="/watch-list">
+        <div className={`${styles.pill} ${router.pathname === '/watchlist' ? styles.active : ''}`} />
+        <Link href="/watchlist">
           <a>
-            <Button active={router.pathname === '/watch-list'}>
+            <Button active={router.pathname === '/watchlist'}>
               <Calendar />
               <span className="sr-only">Watch list</span>
             </Button>

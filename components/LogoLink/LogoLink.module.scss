@@ -1,0 +1,10 @@
+.logo {
+  width: fit-content;
+
+  span {
+    font-size: var(--font-size-h2);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-red);
+    font-family: 'MuseoModerno', sans-serif;
+  }
+}

@@ -1,11 +1,12 @@
 import styles from './NavbarTop.module.scss';
 import NavPrimary from '@components/NavPrimary';
 import NavSecondary from '@components/NavSecondary';
+import LogoLink from '@components/LogoLink';
 
 export default function Navbar() {
   return (
     <header className={styles.header}>
-      <div className={styles.logo}>Seen Machine</div>
+      <LogoLink />
 
       <div className={styles.buttons}>
         <div className="hide-on-mobile">

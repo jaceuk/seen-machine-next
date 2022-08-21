@@ -5,6 +5,6 @@ interface ButtonProps {
   active?: boolean;
 }
 
-export default function Authenticated({ children, active }: ButtonProps) {
+export default function Button({ children, active }: ButtonProps) {
   return <span className={`${styles.button} ${active ? styles.active : ''}`}>{children}</span>;
 }
