@@ -41,15 +41,6 @@
   @media (min-width: 768px) {
     justify-content: flex-start;
   }
-
-  button {
-    width: auto;
-    padding: 0;
-
-    @media (min-width: 768px) {
-      width: auto;
-    }
-  }
 }
 
 .form {

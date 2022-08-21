@@ -2,7 +2,7 @@ import Button from '@components/Button';
 import { signIn } from 'next-auth/react';
 import { ArrowRight } from 'iconoir-react';
 import styles from './HomePageNoAuth.module.scss';
-import LogoLink from '@components/LogoLink';
+import HeaderNoAuth from '@components/HeaderNoAuth';
 
 export default function HomePageNoAuth() {
   function handleClick() {
@@ -12,7 +12,7 @@ export default function HomePageNoAuth() {
   return (
     <div>
       <main className={styles.main}>
-        <LogoLink />
+        <HeaderNoAuth />
 
         <div className={styles.text}>
           <h1>Recommend TV shows and movies to your friends</h1>

@@ -2,9 +2,9 @@ import { useRouter } from 'next/router';
 import { signIn } from 'next-auth/react';
 import { Google, Mail } from 'iconoir-react';
 import styles from './SignIn.module.scss';
-import LogoLink from '@components/LogoLink';
 import Button from '@components/Button';
 import Alert from '@components/Alert';
+import HeaderNoAuth from '@components/HeaderNoAuth';
 
 interface SigninProps {
   csrfToken: string;
@@ -14,11 +14,9 @@ export default function Signin({ csrfToken }: SigninProps) {
   const router = useRouter();
   const query = router.query;
 
-  console.log(query.error);
-
   return (
     <main className={styles.main}>
-      <LogoLink />
+      <HeaderNoAuth />
 
       <div className={styles.text}>
         <h1>Sign in</h1>

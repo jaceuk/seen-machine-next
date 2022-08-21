@@ -10,9 +10,18 @@
   border-radius: var(--border-radius-large);
   font-size: var(--font-size-small);
   font-weight: var(--font-weight-semi-bold);
+  transition: all 0.2s ease-out;
+
+  &:hover {
+    box-shadow: var(--button-box-shadow-hover);
+  }
 
   &.active {
     background: var(--color-red);
     color: var(--color-white);
+
+    &:hover {
+      box-shadow: var(--button-box-shadow-hover);
+    }
   }
 }

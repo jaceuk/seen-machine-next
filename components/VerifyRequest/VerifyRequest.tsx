@@ -1,14 +1,14 @@
-import Button from '@components/Button';
-import LogoLink from '@components/LogoLink';
 import { ArrowLeft } from 'iconoir-react';
 import Link from 'next/link';
 import styles from './VerifyRequest.module.scss';
+import Button from '@components/Button';
+import HeaderNoAuth from '@components/HeaderNoAuth';
 
 export default function VerifyRequest() {
   return (
     <>
       <main className={styles.main}>
-        <LogoLink />
+        <HeaderNoAuth />
 
         <div className={styles.text}>
           <h1>Verify request</h1>
