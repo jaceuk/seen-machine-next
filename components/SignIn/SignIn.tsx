@@ -1,14 +1,21 @@
-import Button from '@components/Button';
+import { useRouter } from 'next/router';
 import { signIn } from 'next-auth/react';
 import { Google, Mail } from 'iconoir-react';
 import styles from './SignIn.module.scss';
 import LogoLink from '@components/LogoLink';
+import Button from '@components/Button';
+import Alert from '@components/Alert';
 
 interface SigninProps {
   csrfToken: string;
 }
 
 export default function Signin({ csrfToken }: SigninProps) {
+  const router = useRouter();
+  const query = router.query;
+
+  console.log(query.error);
+
   return (
     <>
       <main className={styles.main}>
@@ -17,6 +24,7 @@ export default function Signin({ csrfToken }: SigninProps) {
         <div className={styles.text}>
           <h1>Sign in</h1>
           <p>We use passwordless sign in so you won&apos;t need to remember another pesky password!.</p>
+          {query.error && <Alert type="error">There was a problem trying to sign you in, plesase try again.</Alert>}
         </div>
       </main>
       <div className={styles.providers}>

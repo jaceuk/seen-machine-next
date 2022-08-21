@@ -1,0 +1,11 @@
+.alert {
+  font-weight: var(--font-weight-semi-bold);
+  padding: var(--size-base);
+  border-radius: var(--border-radius-small);
+  font-size: var(--font-size-small);
+
+  &.error {
+    color: var(--color-red);
+    background: var(--color-pink);
+  }
+}

@@ -5,7 +5,7 @@ interface SearchHeaderProps {
   handleClose: () => void;
   term: string;
   setTerm: (value: string) => void;
-  handleSubmit: (event: any) => void;
+  handleSubmit: (event: React.SyntheticEvent<HTMLFormElement>) => void;
 }
 
 export default function SearchHeader({ handleClose, term, setTerm, handleSubmit }: SearchHeaderProps) {
