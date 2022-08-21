@@ -17,16 +17,15 @@ export default function Signin({ csrfToken }: SigninProps) {
   console.log(query.error);
 
   return (
-    <>
-      <main className={styles.main}>
-        <LogoLink />
+    <main className={styles.main}>
+      <LogoLink />
 
-        <div className={styles.text}>
-          <h1>Sign in</h1>
-          <p>We use passwordless sign in so you won&apos;t need to remember another pesky password!.</p>
-          {query.error && <Alert type="error">There was a problem trying to sign you in, plesase try again.</Alert>}
-        </div>
-      </main>
+      <div className={styles.text}>
+        <h1>Sign in</h1>
+        <p>We use passwordless sign in so you won&apos;t need to remember another pesky password!.</p>
+        {query.error && <Alert type="error">There was a problem trying to sign you in, plesase try again.</Alert>}
+      </div>
+
       <div className={styles.providers}>
         <button onClick={() => signIn('google')}>
           <Button active>
@@ -50,6 +49,6 @@ export default function Signin({ csrfToken }: SigninProps) {
           </button>
         </form>
       </div>
-    </>
+    </main>
   );
 }

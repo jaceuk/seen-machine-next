@@ -31,29 +31,9 @@
     font-weight: var(--font-weight-light);
     line-height: 1.25;
   }
-}
-
-.buttons {
-  display: flex;
-  flex-direction: column;
-
-  gap: var(--size-large);
-  bottom: 0;
-
-  padding: var(--size-base);
-
-  @media (min-width: 768px) {
-    position: relative;
-    justify-content: flex-start;
-  }
 
   button {
-    width: auto;
     padding: 0;
-
-    @media (min-width: 768px) {
-      width: auto;
-    }
   }
 }
 

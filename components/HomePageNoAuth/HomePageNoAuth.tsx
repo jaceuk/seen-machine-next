@@ -18,15 +18,14 @@ export default function HomePageNoAuth() {
           <h1>Recommend TV shows and movies to your friends</h1>
           <div className={styles.subtitle}>and keep track of what you&apos;ve watched</div>
         </div>
-      </main>
-      <div className={styles.buttons}>
+
         <button onClick={handleClick}>
           <Button active>
             Sign in
             <ArrowRight />
           </Button>
         </button>
-      </div>
+      </main>
     </div>
   );
 }
