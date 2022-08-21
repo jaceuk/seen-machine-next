@@ -5,18 +5,15 @@ import HomePage from '@components/HomePage';
 import Layout from '@components/Layout';
 import LayoutSignIn from '@components/LayoutSignIn';
 import CookieBanner from '@components/CookieBanner';
-import Loading from '@components/Loading';
 
 export default function Home() {
-  const { data: session, status } = useSession();
+  const { status } = useSession();
 
   return (
     <>
       <Head>
         <title>Seen Machine</title>
       </Head>
-
-      {status === 'loading' && <Loading />}
 
       {status !== 'authenticated' && (
         <LayoutSignIn>
