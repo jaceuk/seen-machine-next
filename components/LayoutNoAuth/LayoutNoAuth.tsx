@@ -1,12 +1,12 @@
 import { useRouter } from 'next/router';
 import Hero from './components/Hero';
-import styles from './LayoutSignIn.module.scss';
+import styles from './LayoutNoAuth.module.scss';
 
 interface LayoutProps {
   children: React.ReactNode;
 }
 
-export default function LayoutSignIn({ children }: LayoutProps) {
+export default function LayoutNoAuth({ children }: LayoutProps) {
   const router = useRouter();
 
   return (

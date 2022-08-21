@@ -1,9 +1,9 @@
 import Head from 'next/head';
-import SignIn from '@components/SignIn';
+import HomePageNoAuth from '@components/HomePageNoAuth';
 import { useSession } from 'next-auth/react';
 import HomePage from '@components/HomePage';
 import Layout from '@components/Layout';
-import LayoutSignIn from '@components/LayoutSignIn';
+import LayoutNoAuth from '@components/LayoutNoAuth';
 import CookieBanner from '@components/CookieBanner';
 
 export default function Home() {
@@ -16,10 +16,10 @@ export default function Home() {
       </Head>
 
       {status !== 'authenticated' && (
-        <LayoutSignIn>
+        <LayoutNoAuth>
           <CookieBanner />
-          <SignIn />
-        </LayoutSignIn>
+          <HomePageNoAuth />
+        </LayoutNoAuth>
       )}
 
       {status === 'authenticated' && (
