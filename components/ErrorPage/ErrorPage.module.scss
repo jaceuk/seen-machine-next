@@ -19,3 +19,9 @@
     height: var(--size-medium);
   }
 }
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-base);
+}

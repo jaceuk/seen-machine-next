@@ -1,40 +1,7 @@
 .main {
-  padding: var(--size-base);
   margin-top: -88px;
-  z-index: 100;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: var(--size-large);
-
-  @media (min-width: 900px) {
-    padding: var(--size-medium);
-  }
 
   @media (min-width: 768px) {
     margin-top: 0;
-
-    gap: var(--size-extra-large);
-    padding: var(--size-base) 0 var(--size-base) var(--size-base);
   }
-
-  h1 {
-    @media (min-width: 768px) {
-      font-size: var(--font-size-super);
-      line-height: 1.05;
-    }
-  }
-
-  .subtitle {
-    color: var(--color-red);
-    font-size: var(--font-size-h3);
-    font-weight: var(--font-weight-light);
-    line-height: 1.25;
-  }
-}
-
-.text {
-  display: flex;
-  flex-direction: column;
-  gap: var(--size-base);
 }

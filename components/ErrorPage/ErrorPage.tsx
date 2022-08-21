@@ -1,25 +1,29 @@
 import Button from '@components/Button';
 import HeaderNoAuth from '@components/HeaderNoAuth';
-import { ArrowLeft } from 'iconoir-react';
+import { Home } from 'iconoir-react';
 import Link from 'next/link';
-import styles from './AuthError.module.scss';
+import styles from './ErrorPage.module.scss';
 
-export default function AuthError() {
+interface ErrorProps {
+  type: string;
+  message: string;
+}
+
+export default function ErrorPage({ type, message }: ErrorProps) {
   return (
     <main className="no-auth main">
       <HeaderNoAuth />
 
       <div className="text">
-        <h1>Oops</h1>
-        <div className="subtitle">Something went wrong</div>
-        <p>Please go back to the sign in page and try again.</p>
+        <h1>{type}</h1>
+        <div className="subtitle">{message}</div>
       </div>
 
       <Link href="/auth/signin">
         <a>
           <Button active>
-            <ArrowLeft />
-            Back to sign in
+            <Home />
+            Home
           </Button>
         </a>
       </Link>

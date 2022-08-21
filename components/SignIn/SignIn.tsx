@@ -15,10 +15,10 @@ export default function Signin({ csrfToken }: SigninProps) {
   const query = router.query;
 
   return (
-    <main className={styles.main}>
+    <main className="no-auth main">
       <HeaderNoAuth />
 
-      <div className={styles.text}>
+      <div className="text">
         <h1>Sign in</h1>
         <p>We use passwordless sign in so you won&apos;t need to remember another pesky password!.</p>
         {query.error && <Alert type="error">There was a problem trying to sign you in, plesase try again.</Alert>}

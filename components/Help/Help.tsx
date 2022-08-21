@@ -17,6 +17,10 @@ export default function Help({ handleClose }: HelpProps) {
             </button>
             <h1>Help</h1>
           </div>
+          <p>
+            If you are experiencing any difficulites please contact{' '}
+            <a href="mailto:support@seenmachine.net">support@seenmachine.net.</a>
+          </p>
         </main>
       </>
     </SideBar>
