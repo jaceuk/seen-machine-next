@@ -4,10 +4,10 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 var(--size-base);
-  margin-right: -88px;
 
   @media (min-width: 768px) {
     padding: 0 var(--size-medium);
+    margin-right: -88px;
   }
 }
 

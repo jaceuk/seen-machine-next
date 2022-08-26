@@ -9,7 +9,6 @@
   }
 
   .content {
-    min-width: calc(1375px / 2);
     z-index: 100;
 
     @media (min-width: 768px) {
@@ -47,7 +46,10 @@
 
 .main {
   padding: var(--size-base);
-  margin-right: -88px;
+
+  @media (min-width: 768px) {
+    margin-right: -88px;
+  }
 
   @media (min-width: 900px) {
     padding: var(--size-medium);

@@ -15,7 +15,7 @@ export default function Layout({ children, auth }: LayoutProps) {
   return (
     <div className="wrapper">
       <div className={`${styles.container} ${!auth && styles.noAuth}`}>
-        <div className={`${styles.image} ${router.pathname !== '/' ? 'hide-on-mobile' : ''}`}>
+        <div className={`${styles.image} ${(router.pathname !== '/' || auth) && 'hide-on-mobile'}`}>
           <Hero />
         </div>
 
