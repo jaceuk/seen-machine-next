@@ -24,12 +24,10 @@ export default function NavSecondary() {
       <nav className={styles.nav}>
         <div className={styles.navItem} onClick={handleToggleProfile}>
           <button>
-            <a>
-              <Button>
-                <User />
-                <span className="sr-only">Profile</span>
-              </Button>
-            </a>
+            <Button>
+              <User />
+              <span className="sr-only">Profile</span>
+            </Button>
           </button>
         </div>
 

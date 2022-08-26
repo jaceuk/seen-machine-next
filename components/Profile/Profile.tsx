@@ -1,3 +1,5 @@
+import { useSession } from 'next-auth/react';
+import { signOut } from 'next-auth/react';
 import SideBar from '@components/SideBar';
 import { NavArrowLeft } from 'iconoir-react';
 import styles from './Profile.module.scss';
@@ -7,6 +9,8 @@ interface ProfileProps {
 }
 
 export default function Profile({ handleClose }: ProfileProps) {
+  const { data: session } = useSession();
+
   return (
     <SideBar handleClose={handleClose}>
       <>
@@ -16,7 +20,14 @@ export default function Profile({ handleClose }: ProfileProps) {
           </button>
           <h1>Profile</h1>
         </header>
-        <main className={styles.main}>options</main>
+        <main className={styles.main}>
+          {Object.keys(session.user).map((item, index) => (
+            <div key={index}>
+              {item}: {session.user[item]}
+            </div>
+          ))}
+          <button onClick={() => signOut()}>Sign out</button>
+        </main>
       </>
     </SideBar>
   );

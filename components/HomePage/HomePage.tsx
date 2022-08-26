@@ -1,4 +1,3 @@
-import { signOut } from 'next-auth/react';
 import TabGroup from '@components/TabGroup';
 import CardVertical from '@components/CardVertical';
 import trendingShows from '@data/trendingShows.json';
@@ -8,7 +7,6 @@ import styles from './HomePage.module.scss';
 export default function HomePage() {
   return (
     <>
-      <button onClick={() => signOut()}>Sign out</button>
       <TabGroup
         shows={
           <>
