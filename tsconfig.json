@@ -14,7 +14,8 @@
       "@styles/*": ["styles/*"],
       "@data/*": ["data/*"],
       "@hooks/*": ["hooks/*"],
-      "@images/*": ["public/images*"]
+      "@images/*": ["public/images*"],
+      "@types/*": ["types/*"],
     },
     "allowJs": true,
     "skipLibCheck": true,
