@@ -2,13 +2,13 @@ import { useSession } from 'next-auth/react';
 import { signOut } from 'next-auth/react';
 import SideBar from '@components/SideBar';
 import { NavArrowLeft } from 'iconoir-react';
-import styles from './Profile.module.scss';
+import styles from './Menu.module.scss';
 
 interface ProfileProps {
   handleClose: () => void;
 }
 
-export default function Profile({ handleClose }: ProfileProps) {
+export default function Menu({ handleClose }: ProfileProps) {
   const { data: session } = useSession();
 
   return (
@@ -18,7 +18,7 @@ export default function Profile({ handleClose }: ProfileProps) {
           <button className={styles.backButton} onClick={handleClose} aria-label="Back">
             <NavArrowLeft />
           </button>
-          <h1>Profile</h1>
+          <h1>Menu</h1>
         </header>
         <main className={styles.main}>
           {Object.keys(session.user).map((item, index) => (

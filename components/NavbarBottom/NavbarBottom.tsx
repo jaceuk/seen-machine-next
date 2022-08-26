@@ -1,10 +1,10 @@
 import styles from './NavbarBottom.module.scss';
-import NavPrimary from '@components/NavPrimary';
+import Nav from './components/Nav';
 
 export default function NavbarBottom() {
   return (
     <footer className={`${styles.footer} hide-on-desktop`}>
-      <NavPrimary />
+      <Nav />
     </footer>
   );
 }

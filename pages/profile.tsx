@@ -10,9 +10,9 @@ export default function Home() {
       {status === 'authenticated' && (
         <>
           <Head>
-            <title>Seen Machine - Recommended</title>
+            <title>Seen Machine - Watched</title>
           </Head>
-          <Layout>Recommended</Layout>
+          <Layout>Profile</Layout>
         </>
       )}
     </>

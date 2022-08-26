@@ -1,5 +1,5 @@
 import styles from './NavbarTop.module.scss';
-import NavSecondary from '@components/NavSecondary';
+import Nav from './components/Nav';
 import LogoLink from '@components/LogoLink';
 
 export default function Navbar() {
@@ -8,7 +8,7 @@ export default function Navbar() {
       <LogoLink />
 
       <div className={styles.buttons}>
-        <NavSecondary />
+        <Nav />
       </div>
     </header>
   );

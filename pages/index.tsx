@@ -14,7 +14,7 @@ export default function Home() {
         <title>Seen Machine</title>
       </Head>
 
-      <Layout auth={status === 'authenticated'}>
+      <Layout>
         {status !== 'authenticated' && (
           <>
             <CookieBanner />
