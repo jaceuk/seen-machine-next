@@ -11,6 +11,7 @@
 
 .content {
   max-width: calc(1375px / 2);
+  z-index: 100;
 
   @media (min-width: 768px) {
     width: 50%;

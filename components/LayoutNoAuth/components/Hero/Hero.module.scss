@@ -1,22 +1,11 @@
 .hero {
   position: relative;
-  z-index: 0;
-  width: 100%;
-  height: 100%;
-
-  @media (min-width: 768px) {
-    position: fixed;
-  }
-}
-
-.image {
-  position: relative;
-  width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
+  width: 100%;
+  height: 100%;
 
   @media (min-width: 768px) {
     justify-content: center;
