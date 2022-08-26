@@ -8,6 +8,14 @@
   }
 }
 
+.header {
+  background-color: var(--color-grey-light);
+  padding: var(--size-base);
+  display: flex;
+  align-items: center;
+  gap: var(--size-base);
+}
+
 .backButton {
   padding: var(--size-small);
   display: flex;
@@ -42,11 +50,4 @@
 
 .contents {
   overflow-y: auto;
-}
-
-.title {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: var(--size-base);
 }
