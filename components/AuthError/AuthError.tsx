@@ -6,7 +6,7 @@ import styles from './AuthError.module.scss';
 
 export default function AuthError() {
   return (
-    <main className="no-auth main">
+    <div className="no-auth-page">
       <HeaderNoAuth />
 
       <div className="text">
@@ -23,6 +23,6 @@ export default function AuthError() {
           </Button>
         </a>
       </Link>
-    </main>
+    </div>
   );
 }

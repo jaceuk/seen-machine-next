@@ -10,7 +10,7 @@ export default function HomePageNoAuth() {
   }
 
   return (
-    <main className={`no-auth main ${styles.main}`}>
+    <div className={`no-auth-page ${styles.main}`}>
       <HeaderNoAuth />
 
       <div className="text">
@@ -24,6 +24,6 @@ export default function HomePageNoAuth() {
           Sign in
         </Button>
       </button>
-    </main>
+    </div>
   );
 }

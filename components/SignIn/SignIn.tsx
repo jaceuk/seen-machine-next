@@ -15,7 +15,7 @@ export default function Signin({ csrfToken }: SigninProps) {
   const query = router.query;
 
   return (
-    <main className="no-auth main">
+    <div className="no-auth-page">
       <HeaderNoAuth />
 
       <div className="text">
@@ -47,6 +47,6 @@ export default function Signin({ csrfToken }: SigninProps) {
           </button>
         </form>
       </div>
-    </main>
+    </div>
   );
 }

@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import LayoutNoAuth from '@components/LayoutNoAuth';
+import Layout from '@components/Layout';
 import SignIn from '@components/SignIn';
 import { getCsrfToken, getSession } from 'next-auth/react';
 
@@ -13,9 +13,9 @@ export default function SignInPage({ csrfToken }: SignInPageProps) {
       <Head>
         <title>Seen Machine - Sign in</title>
       </Head>
-      <LayoutNoAuth>
+      <Layout>
         <SignIn csrfToken={csrfToken} />
-      </LayoutNoAuth>
+      </Layout>
     </>
   );
 }

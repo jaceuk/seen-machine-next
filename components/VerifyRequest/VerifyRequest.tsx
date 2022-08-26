@@ -6,7 +6,7 @@ import HeaderNoAuth from '@components/HeaderNoAuth';
 
 export default function VerifyRequest() {
   return (
-    <main className="no-auth main">
+    <div className="no-auth-page">
       <HeaderNoAuth />
 
       <div className="text">
@@ -25,6 +25,6 @@ export default function VerifyRequest() {
           </Button>
         </a>
       </Link>
-    </main>
+    </div>
   );
 }

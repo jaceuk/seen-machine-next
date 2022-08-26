@@ -3,7 +3,6 @@ import HomePageNoAuth from '@components/HomePageNoAuth';
 import { useSession } from 'next-auth/react';
 import HomePage from '@components/HomePage';
 import Layout from '@components/Layout';
-import LayoutNoAuth from '@components/LayoutNoAuth';
 import CookieBanner from '@components/CookieBanner';
 
 export default function Home() {
@@ -15,18 +14,15 @@ export default function Home() {
         <title>Seen Machine</title>
       </Head>
 
-      {status !== 'authenticated' && (
-        <LayoutNoAuth>
-          <CookieBanner />
-          <HomePageNoAuth />
-        </LayoutNoAuth>
-      )}
-
-      {status === 'authenticated' && (
-        <Layout>
-          <HomePage />
-        </Layout>
-      )}
+      <Layout auth={status === 'authenticated'}>
+        {status !== 'authenticated' && (
+          <>
+            <CookieBanner />
+            <HomePageNoAuth />
+          </>
+        )}
+        {status === 'authenticated' && <HomePage />}
+      </Layout>
     </>
   );
 }

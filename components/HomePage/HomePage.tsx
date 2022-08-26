@@ -7,11 +7,12 @@ import styles from './HomePage.module.scss';
 export default function HomePage() {
   return (
     <>
+      <h1>Recommendations</h1>
+      <div>Your friends thought you might like these</div>
+
       <TabGroup
         shows={
           <>
-            <h1 className={styles.title}>Recommended</h1>
-            <div className={styles.subtext}>Your friends thought you might like these</div>
             <div className={styles.results}>
               {trendingShows.results.map((show, index) => (
                 <CardVertical key={index} data={show} />

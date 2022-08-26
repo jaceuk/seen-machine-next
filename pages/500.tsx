@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import LayoutNoAuth from '@components/LayoutNoAuth';
+import Layout from '@components/Layout';
 import ErrorPage from '@components/ErrorPage';
 
 export default function Error() {
@@ -8,9 +8,9 @@ export default function Error() {
       <Head>
         <title>Seen Machine - Authentication error</title>
       </Head>
-      <LayoutNoAuth>
+      <Layout>
         <ErrorPage type="Error 500" message="This is usually as problem at our end. Please try again." />
-      </LayoutNoAuth>
+      </Layout>
     </>
   );
 }

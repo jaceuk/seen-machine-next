@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import LayoutNoAuth from '@components/LayoutNoAuth';
+import Layout from '@components/Layout';
 import VerifyRequest from '@components/VerifyRequest';
 
 export default function VerifyRequestPage() {
@@ -8,9 +8,9 @@ export default function VerifyRequestPage() {
       <Head>
         <title>Seen Machine - Sign in</title>
       </Head>
-      <LayoutNoAuth>
+      <Layout>
         <VerifyRequest />
-      </LayoutNoAuth>
+      </Layout>
     </>
   );
 }
