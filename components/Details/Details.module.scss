@@ -49,4 +49,8 @@
   align-items: center;
   justify-content: flex-start;
   gap: var(--size-base);
+
+  h1 {
+    font-size: var(--font-size-h1);
+  }
 }

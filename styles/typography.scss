@@ -33,11 +33,16 @@ body {
 h1 {
   font-size: var(--font-size-h1);
   font-weight: var(--font-weight-bold);
+
+  @media (min-width: 768px) {
+    font-size: var(--font-size-super);
+    line-height: 1.05;
+  }
 }
 
 h2 {
   font-size: var(--font-size-h2);
-  font-weight: var(--font-weight-medium);
+  font-weight: var(--font-weight-light);
 }
 
 .small {

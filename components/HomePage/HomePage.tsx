@@ -3,12 +3,12 @@ import CardVertical from '@components/CardVertical';
 import trendingShows from '@data/trendingShows.json';
 import trendingMovies from '@data/trendingMovies.json';
 import styles from './HomePage.module.scss';
+import Title from '@components/Title';
 
 export default function HomePage() {
   return (
-    <>
-      <h1>Recommendations</h1>
-      <div>Your friends thought you might like these</div>
+    <div>
+      <Title title="Recommendations" subtext="Your friends thought you might like these" />
 
       <TabGroup
         shows={
@@ -47,6 +47,6 @@ export default function HomePage() {
           </>
         }
       />
-    </>
+    </div>
   );
 }
