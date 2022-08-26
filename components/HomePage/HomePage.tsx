@@ -8,7 +8,7 @@ import Title from '@components/Title';
 export default function HomePage() {
   return (
     <div>
-      <Title title="Recommendations" subtext="Your friends thought you might like these" />
+      <Title title="Recommended" subtext="Your friends thought you might like these" />
 
       <TabGroup
         shows={
@@ -18,27 +18,10 @@ export default function HomePage() {
                 <CardVertical key={index} data={show} />
               ))}
             </div>
-
-            <h1 className={styles.title}>Watched</h1>
-            <div className={styles.subtext}>Your watched these recently</div>
-            <div className={styles.results}>
-              {trendingMovies.results.map((movie, index) => (
-                <CardVertical key={index} data={movie} />
-              ))}
-            </div>
-
-            <h1 className={styles.title}>Watch list</h1>
-            <div className={styles.subtext}>You added these to your watch list recently</div>
-            <div className={styles.results}>
-              {trendingShows.results.map((show, index) => (
-                <CardVertical key={index} data={show} />
-              ))}
-            </div>
           </>
         }
         movies={
           <>
-            <h1 className={styles.title}>Trending</h1>
             <div className={styles.results}>
               {trendingMovies.results.map((movie, index) => (
                 <CardVertical key={index} data={movie} />

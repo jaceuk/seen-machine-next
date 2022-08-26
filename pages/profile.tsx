@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { getSession, useSession } from 'next-auth/react';
 import Layout from '@components/Layout';
+import Profile from '@components/Profile';
 
 export default function Home() {
   const { status } = useSession();
@@ -12,7 +13,9 @@ export default function Home() {
           <Head>
             <title>Seen Machine - Watched</title>
           </Head>
-          <Layout>Profile</Layout>
+          <Layout>
+            <Profile />
+          </Layout>
         </>
       )}
     </>

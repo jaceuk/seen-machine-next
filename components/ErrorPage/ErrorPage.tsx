@@ -1,8 +1,4 @@
-import Button from '@components/Button';
-import HeaderNoAuth from '@components/HeaderNoAuth';
-import { Home } from 'iconoir-react';
-import Link from 'next/link';
-import styles from './ErrorPage.module.scss';
+import Title from '@components/Title';
 
 interface ErrorProps {
   type: string;
@@ -10,23 +6,5 @@ interface ErrorProps {
 }
 
 export default function ErrorPage({ type, message }: ErrorProps) {
-  return (
-    <main className="no-auth main">
-      <HeaderNoAuth />
-
-      <div className="text">
-        <h1>{type}</h1>
-        <div className="subtitle">{message}</div>
-      </div>
-
-      <Link href="/auth/signin">
-        <a>
-          <Button active>
-            <Home />
-            Home
-          </Button>
-        </a>
-      </Link>
-    </main>
-  );
+  return <Title title={type} subtext={message} />;
 }

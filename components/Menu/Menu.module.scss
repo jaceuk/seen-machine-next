@@ -52,3 +52,41 @@
   justify-content: flex-start;
   gap: var(--size-base);
 }
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  gap: var(--size-base);
+  width: 100%;
+
+  @media (min-width: 900px) {
+    width: fit-content;
+    padding: 0;
+  }
+
+  .navItem {
+    padding: 0 0 var(--size-base) 0;
+    width: 25%;
+
+    @media (min-width: 900px) {
+      width: auto;
+    }
+
+    .pill {
+      background: transparent;
+      height: var(--size-small);
+      margin-bottom: var(--size-base);
+      border-radius: 0 0 var(--border-radius-small) var(--border-radius-small);
+
+      &.active {
+        background: var(--color-red);
+      }
+    }
+
+    & > button {
+      width: 100%;
+    }
+  }
+}

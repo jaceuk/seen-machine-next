@@ -1,15 +1,16 @@
-import { useSession } from 'next-auth/react';
-import { signOut } from 'next-auth/react';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 import SideBar from '@components/SideBar';
-import { NavArrowLeft } from 'iconoir-react';
+import { Home, User, Calendar, SecurityPass, NavArrowLeft } from 'iconoir-react';
 import styles from './Menu.module.scss';
+import Button from '@components/Button';
 
 interface ProfileProps {
   handleClose: () => void;
 }
 
 export default function Menu({ handleClose }: ProfileProps) {
-  const { data: session } = useSession();
+  const router = useRouter();
 
   return (
     <SideBar handleClose={handleClose}>
@@ -20,14 +21,44 @@ export default function Menu({ handleClose }: ProfileProps) {
           </button>
           <h1>Menu</h1>
         </header>
-        <main className={styles.main}>
-          {Object.keys(session.user).map((item, index) => (
-            <div key={index}>
-              {item}: {session.user[item]}
-            </div>
-          ))}
-          <button onClick={() => signOut()}>Sign out</button>
-        </main>
+
+        <nav>
+          <Link href="/">
+            <a>
+              <Button active={router.pathname === '/'}>
+                <Home />
+                Home
+              </Button>
+            </a>
+          </Link>
+
+          <Link href="/watched">
+            <a>
+              <Button active={router.pathname === '/watched'}>
+                <SecurityPass />
+                Watched
+              </Button>
+            </a>
+          </Link>
+
+          <Link href="/watchlist">
+            <a>
+              <Button active={router.pathname === '/watchlist'}>
+                <Calendar />
+                Watch list
+              </Button>
+            </a>
+          </Link>
+
+          <Link href="/profile">
+            <a>
+              <Button active={router.pathname === '/profile'}>
+                <User />
+                Profile
+              </Button>
+            </a>
+          </Link>
+        </nav>
       </>
     </SideBar>
   );
