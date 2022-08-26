@@ -21,10 +21,10 @@ export default function Signin({ csrfToken }: SigninProps) {
       <div className="text">
         <h1>Sign in</h1>
         <p>We use passwordless sign in so you won&apos;t need to remember another pesky password!.</p>
-        {query.error && <Alert type="error">There was a problem trying to sign you in, plesase try again.</Alert>}
       </div>
 
       <div className={styles.providers}>
+        {query.error && <Alert type="error">There was a problem trying to sign you in, plesase try again.</Alert>}
         <button onClick={() => signIn('google')}>
           <Button active>
             <Google />

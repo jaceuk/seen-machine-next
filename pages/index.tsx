@@ -7,7 +7,9 @@ import LayoutNoAuth from '@components/LayoutNoAuth';
 import CookieBanner from '@components/CookieBanner';
 
 export default function Home() {
-  const { status } = useSession();
+  const { data: session, status } = useSession();
+
+  console.log(session);
 
   return (
     <>

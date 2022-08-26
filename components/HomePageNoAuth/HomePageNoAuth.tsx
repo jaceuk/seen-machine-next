@@ -1,6 +1,6 @@
 import Button from '@components/Button';
 import { signIn } from 'next-auth/react';
-import { ArrowRight } from 'iconoir-react';
+import { LogIn } from 'iconoir-react';
 import styles from './HomePageNoAuth.module.scss';
 import HeaderNoAuth from '@components/HeaderNoAuth';
 
@@ -20,8 +20,8 @@ export default function HomePageNoAuth() {
 
       <button onClick={handleClick}>
         <Button active>
+          <LogIn />
           Sign in
-          <ArrowRight />
         </Button>
       </button>
     </main>
