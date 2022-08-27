@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Image from 'next/image';
 import Details from '@components/DetailsSideBar';
-import posterPlaceholder from 'src/images/posterPlaceholder.png';
+import posterPlaceholder from '@images/posterPlaceholder.png';
 import styles from './CardVertical.module.scss';
 
 interface CardVerticalProps {

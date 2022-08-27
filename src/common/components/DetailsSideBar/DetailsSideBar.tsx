@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import SideBar from '@components/SideBar';
-import backdropPlaceholder from 'src/images/backdropPlaceholder.png';
+import backdropPlaceholder from '@images/backdropPlaceholder.png';
 import styles from './DetailsSideBar.module.scss';
 import HeaderSideBar from '@components/HeaderSideBar';
 
