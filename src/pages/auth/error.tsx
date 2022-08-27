@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Layout from '@components/Layout';
-import AuthError from '@components/AuthError';
+import AuthError from '@modules/AuthError';
 
 export default function Error() {
   return (

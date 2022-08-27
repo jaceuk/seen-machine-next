@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Layout from '@components/Layout';
-import VerifyRequest from '@components/VerifyRequest';
+import VerifyRequest from '@modules/VerifyRequest';
 
 export default function VerifyRequestPage() {
   return (

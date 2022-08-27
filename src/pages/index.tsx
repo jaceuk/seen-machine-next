@@ -1,7 +1,7 @@
 import Head from 'next/head';
-import HomePageNoAuth from '@components/HomePageNoAuth';
+import HomePageNoAuth from '@modules/HomeNoAuth';
 import { useSession } from 'next-auth/react';
-import HomePage from '@components/HomePage';
+import HomePage from '@modules/Home';
 import Layout from '@components/Layout';
 import CookieBanner from '@components/CookieBanner';
 

@@ -2,7 +2,6 @@ import Button from '@components/Button';
 import HeaderNoAuth from '@components/HeaderNoAuth';
 import { ArrowLeft } from 'iconoir-react';
 import Link from 'next/link';
-import styles from './AuthError.module.scss';
 
 export default function AuthError() {
   return (

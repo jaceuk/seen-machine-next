@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Layout from '@components/Layout';
-import ErrorPage from '@components/ErrorPage';
+import ErrorPage from '@modules/Error';
 
 export default function Error() {
   return (

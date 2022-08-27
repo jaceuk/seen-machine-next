@@ -5,6 +5,6 @@ interface ErrorProps {
   message: string;
 }
 
-export default function ErrorPage({ type, message }: ErrorProps) {
+export default function Error({ type, message }: ErrorProps) {
   return <Title title={type} subtext={message} />;
 }

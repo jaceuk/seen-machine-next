@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Layout from '@components/Layout';
-import SignIn from '@components/SignIn';
+import SignIn from '@modules/SignIn';
 import { getCsrfToken, getSession } from 'next-auth/react';
 
 interface SignInPageProps {

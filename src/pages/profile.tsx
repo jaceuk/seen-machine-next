@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { getSession, useSession } from 'next-auth/react';
 import Layout from '@components/Layout';
-import Profile from '@components/ProfilePage';
+import Profile from '@modules/Profile';
 
 export default function Home() {
   const { status } = useSession();

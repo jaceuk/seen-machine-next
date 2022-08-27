@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { getSession, useSession } from 'next-auth/react';
 import Layout from '@components/Layout';
-import Watched from '@components/WatchedPage';
+import Watched from '@modules/Watched';
 
 export default function Home() {
   const { status } = useSession();
