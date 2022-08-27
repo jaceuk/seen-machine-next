@@ -1,23 +1,6 @@
-.backButton {
-  padding: var(--size-small);
-  display: flex;
-}
-
 .main {
   padding: var(--size-base);
   background: var(--color-white);
-}
-
-.header {
-  background-color: var(--color-grey-light);
-  padding: var(--size-base);
-  display: flex;
-  align-items: center;
-  gap: var(--size-base);
-
-  h1 {
-    font-size: var(--font-size-h1);
-  }
 }
 
 .container {

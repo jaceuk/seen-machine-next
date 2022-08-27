@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { Menu as MenuIcon, Search as SearchIcon } from 'iconoir-react';
 import IconButton from '@components/IconButton';
-import Button from '@components/Button';
+
 import styles from './Nav.module.scss';
-import Search from '@components/Search';
-import Menu from '@components/Menu';
+import SearchSideBar from '@components/SearchSideBar';
+import MenuSideBar from '@components/MenuSideBar';
 
 export default function Nav() {
   const [showSearch, setShowSearch] = React.useState(false);
@@ -42,8 +42,8 @@ export default function Nav() {
         </div>
       </nav>
 
-      {showSearch && <Search handleClose={handleToggleSearch} />}
-      {showMenu && <Menu handleClose={handleToggleMenu} />}
+      {showSearch && <SearchSideBar handleClose={handleToggleSearch} />}
+      {showMenu && <MenuSideBar handleClose={handleToggleMenu} />}
     </>
   );
 }

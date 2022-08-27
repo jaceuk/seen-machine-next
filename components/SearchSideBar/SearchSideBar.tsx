@@ -1,8 +1,8 @@
 import * as React from 'react';
 import SideBar from '@components/SideBar';
 import getData from './utils/getData';
-import styles from './Search.module.scss';
-import SearchHeader from '@components/Search/components/SearchHeader';
+import styles from './SearchSideBar.module.scss';
+import SearchHeader from './components/SearchHeader';
 import TabGroup from '@components/TabGroup';
 import Shows from './components/Shows';
 import Movies from './components/Movies';
@@ -11,7 +11,7 @@ interface IProps {
   handleClose: () => void;
 }
 
-export default function Search({ handleClose }: IProps) {
+export default function SearchSideBar({ handleClose }: IProps) {
   const [term, setTerm] = React.useState('');
   const [shows, setShows] = React.useState<any>([]);
   const [movies, setMovies] = React.useState<any>([]);
@@ -43,6 +43,7 @@ export default function Search({ handleClose }: IProps) {
     <SideBar handleClose={handleClose}>
       <>
         <SearchHeader handleClose={handleClose} term={term} setTerm={setTerm} handleSubmit={handleSubmit} />
+
         {shows.results && movies.results && (
           <main className={styles.main}>
             <TabGroup

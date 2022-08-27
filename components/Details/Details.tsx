@@ -3,6 +3,7 @@ import SideBar from '@components/SideBar';
 import { NavArrowLeft } from 'iconoir-react';
 import backdropPlaceholder from '/images/backdropPlaceholder.png';
 import styles from './Details.module.scss';
+import HeaderSideBar from '@components/HeaderSideBar';
 
 interface DetailsProps {
   data: any;
@@ -13,22 +14,17 @@ export default function Details({ data, handleClose }: DetailsProps) {
   return (
     <SideBar handleClose={handleClose}>
       <>
+        <HeaderSideBar title={data.name || data.title} handleClose={handleClose} />
+
         <div className={styles.backdrop}>
           <Image
             layout="fill"
             objectFit="cover"
-            src={data.backdrop_path ? `https://image.tmdb.org/t/p/w400/${data.backdrop_path}` : backdropPlaceholder}
+            src={data.backdrop_path ? `https://image.tmdb.org/t/p/w780/${data.backdrop_path}` : backdropPlaceholder}
             alt=""
           />
         </div>
-        <main className={styles.main}>
-          <div className={styles.title}>
-            <button className={styles.backButton} onClick={handleClose} aria-label="Back">
-              <NavArrowLeft />
-            </button>
-            <h1>{data.name || data.title}</h1>
-          </div>
-        </main>
+        <main className={styles.main}>details</main>
       </>
     </SideBar>
   );

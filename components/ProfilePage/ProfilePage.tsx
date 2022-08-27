@@ -2,7 +2,7 @@ import { useSession } from 'next-auth/react';
 import { signOut } from 'next-auth/react';
 import Title from '@components/Title';
 
-export default function Profile() {
+export default function ProfilePage() {
   const { data: session } = useSession();
 
   return (

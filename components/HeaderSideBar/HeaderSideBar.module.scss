@@ -1,0 +1,16 @@
+.header {
+  background-color: var(--color-grey-light);
+  padding: var(--size-base);
+  display: flex;
+  align-items: center;
+  gap: var(--size-small);
+
+  .backButton {
+    padding: var(--size-small);
+    display: flex;
+  }
+
+  h2 {
+    font-size: var(--font-size-h2);
+  }
+}

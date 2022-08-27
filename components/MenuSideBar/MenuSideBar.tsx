@@ -1,26 +1,22 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import SideBar from '@components/SideBar';
-import { Home, User, Calendar, SecurityPass, NavArrowLeft } from 'iconoir-react';
-import styles from './Menu.module.scss';
+import { Home, User, Calendar, SecurityPass } from 'iconoir-react';
+import styles from './MenuSideBar.module.scss';
 import Button from '@components/Button';
+import HeaderSideBar from '@components/HeaderSideBar';
 
 interface ProfileProps {
   handleClose: () => void;
 }
 
-export default function Menu({ handleClose }: ProfileProps) {
+export default function MenuSideBar({ handleClose }: ProfileProps) {
   const router = useRouter();
 
   return (
     <SideBar type="narrow" handleClose={handleClose}>
       <>
-        <header className={styles.header}>
-          <button className={styles.backButton} onClick={handleClose} aria-label="Back">
-            <NavArrowLeft />
-          </button>
-          <h1>Menu</h1>
-        </header>
+        <HeaderSideBar title="Menu" handleClose={handleClose} />
 
         <nav className={styles.nav}>
           <Link href="/">
