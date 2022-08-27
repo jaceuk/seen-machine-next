@@ -1,6 +1,6 @@
 import styles from './Hero.module.scss';
 import Image from 'next/image';
-import heroPlaceholder from '/images/hero.jpg';
+import heroPlaceholder from 'src/images/hero.jpg';
 
 export default function Hero() {
   return (

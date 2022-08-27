@@ -1,7 +1,7 @@
 import styles from './Hero.module.scss';
 import Navbar from '@components/NavbarTop';
 import Image from 'next/image';
-import heroPlaceholder from '/images/hero.jpg';
+import heroPlaceholder from '@images/hero.jpg';
 
 export default function Hero() {
   return (

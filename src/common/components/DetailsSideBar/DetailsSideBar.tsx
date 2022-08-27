@@ -1,16 +1,15 @@
 import Image from 'next/image';
 import SideBar from '@components/SideBar';
-import { NavArrowLeft } from 'iconoir-react';
-import backdropPlaceholder from '/images/backdropPlaceholder.png';
-import styles from './Details.module.scss';
+import backdropPlaceholder from 'src/images/backdropPlaceholder.png';
+import styles from './DetailsSideBar.module.scss';
 import HeaderSideBar from '@components/HeaderSideBar';
 
-interface DetailsProps {
+interface DetailsSideBarProps {
   data: any;
   handleClose: () => void;
 }
 
-export default function Details({ data, handleClose }: DetailsProps) {
+export default function DetailsSideBar({ data, handleClose }: DetailsSideBarProps) {
   return (
     <SideBar handleClose={handleClose}>
       <>
