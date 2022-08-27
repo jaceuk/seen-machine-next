@@ -1,0 +1,11 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  gap: var(--size-extra-small);
+
+  @media (min-width: 768px) {
+    gap: var(--size-base);
+  }
+}

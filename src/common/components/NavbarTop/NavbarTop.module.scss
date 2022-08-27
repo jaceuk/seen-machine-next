@@ -1,0 +1,19 @@
+.header {
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--size-base);
+  background: var(--color-grey-10);
+
+  @media (min-width: 768px) {
+    padding: var(--size-base) var(--size-medium);
+    margin-right: -88px;
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: var(--size-base);
+}
