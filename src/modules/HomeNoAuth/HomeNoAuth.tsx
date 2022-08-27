@@ -1,10 +1,10 @@
 import Button from '@components/Button';
 import { signIn } from 'next-auth/react';
 import { LogIn } from 'iconoir-react';
-import styles from './HomePageNoAuth.module.scss';
+import styles from './HomeNoAuth.module.scss';
 import HeaderNoAuth from '@components/HeaderNoAuth';
 
-export default function HomePageNoAuth() {
+export default function HomeNoAuth() {
   function handleClick() {
     signIn();
   }
