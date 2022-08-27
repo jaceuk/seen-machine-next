@@ -13,7 +13,7 @@ export default function Menu({ handleClose }: ProfileProps) {
   const router = useRouter();
 
   return (
-    <SideBar handleClose={handleClose}>
+    <SideBar type="narrow" handleClose={handleClose}>
       <>
         <header className={styles.header}>
           <button className={styles.backButton} onClick={handleClose} aria-label="Back">
@@ -22,7 +22,7 @@ export default function Menu({ handleClose }: ProfileProps) {
           <h1>Menu</h1>
         </header>
 
-        <nav>
+        <nav className={styles.nav}>
           <Link href="/">
             <a>
               <Button active={router.pathname === '/'}>

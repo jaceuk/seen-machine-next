@@ -5,6 +5,7 @@ import styles from './SideBar.module.scss';
 interface SideBarProps {
   children: JSX.Element;
   handleClose: () => void;
+  type?: 'narrow';
 }
 
 const cardVariants: Variants = {
@@ -20,7 +21,7 @@ const cardVariants: Variants = {
   },
 };
 
-export default function SideBar({ handleClose, children }: SideBarProps) {
+export default function SideBar({ handleClose, children, type }: SideBarProps) {
   return (
     <Overlay>
       <motion.div
@@ -32,7 +33,7 @@ export default function SideBar({ handleClose, children }: SideBarProps) {
       >
         <div className={styles.container}>
           <div className={styles.clickable} onClick={handleClose}></div>
-          <div className={styles.contents}>{children}</div>
+          <div className={`${styles.contents} ${type === 'narrow' && styles.narrow}`}>{children}</div>
         </div>
       </motion.div>
     </Overlay>

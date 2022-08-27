@@ -54,39 +54,19 @@
 }
 
 .nav {
+  padding: var(--size-base);
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
   position: relative;
   gap: var(--size-base);
-  width: 100%;
 
-  @media (min-width: 900px) {
-    width: fit-content;
-    padding: 0;
+  span {
+    justify-content: flex-start;
   }
 
-  .navItem {
-    padding: 0 0 var(--size-base) 0;
-    width: 25%;
-
-    @media (min-width: 900px) {
-      width: auto;
-    }
-
-    .pill {
-      background: transparent;
-      height: var(--size-small);
-      margin-bottom: var(--size-base);
-      border-radius: 0 0 var(--border-radius-small) var(--border-radius-small);
-
-      &.active {
-        background: var(--color-red);
-      }
-    }
-
-    & > button {
-      width: 100%;
-    }
+  @media (min-width: 768px) {
+    padding: var(--size-medium);
   }
 }
