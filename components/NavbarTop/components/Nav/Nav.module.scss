@@ -8,12 +8,4 @@
   @media (min-width: 768px) {
     gap: var(--size-base);
   }
-
-  .navItem {
-    padding: calc(var(--size-base) + var(--size-small)) 0 var(--size-base) 0;
-
-    & > button {
-      width: 100%;
-    }
-  }
 }

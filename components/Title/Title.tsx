@@ -9,7 +9,7 @@ export default function Title({ title, subtext }: TitleProps) {
   return (
     <div className={styles.title}>
       <h1>{title}</h1>
-      {subtext && <h2>{subtext}</h2>}
+      {subtext && <p>{subtext}</p>}
     </div>
   );
 }

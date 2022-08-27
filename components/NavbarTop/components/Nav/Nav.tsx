@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Menu as MenuIcon, Search as SearchIcon } from 'iconoir-react';
-import Button from '@components/IconButton';
+import IconButton from '@components/IconButton';
+import Button from '@components/Button';
 import styles from './Nav.module.scss';
 import Search from '@components/Search';
 import Menu from '@components/Menu';
@@ -22,21 +23,21 @@ export default function Nav() {
   return (
     <>
       <nav className={styles.nav}>
-        <div className={`${styles.navItem} hide-on-mobile`} onClick={handleToggleMenu}>
+        <div className="hide-on-mobile" onClick={handleToggleMenu}>
           <button>
-            <Button>
+            <IconButton>
               <MenuIcon />
               <span className="sr-only">Menu</span>
-            </Button>
+            </IconButton>
           </button>
         </div>
 
-        <div className={styles.navItem} onClick={handleToggleSearch}>
+        <div onClick={handleToggleSearch}>
           <button>
-            <Button active>
+            <IconButton active>
               <SearchIcon />
               <span className="sr-only">Search</span>
-            </Button>
+            </IconButton>
           </button>
         </div>
       </nav>
