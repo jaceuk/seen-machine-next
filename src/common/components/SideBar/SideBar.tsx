@@ -2,7 +2,7 @@ import { motion, Variants } from 'framer-motion';
 import Overlay from '@components/Overlay';
 import styles from './SideBar.module.scss';
 
-interface SideBarProps {
+interface Props {
   children: JSX.Element;
   handleClose: () => void;
   type?: 'narrow';
@@ -21,7 +21,7 @@ const cardVariants: Variants = {
   },
 };
 
-export default function SideBar({ handleClose, children, type }: SideBarProps) {
+export default function SideBar({ handleClose, children, type }: Props) {
   return (
     <Overlay>
       <motion.div

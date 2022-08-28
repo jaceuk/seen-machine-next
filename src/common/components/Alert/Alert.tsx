@@ -1,11 +1,11 @@
 import styles from './Alert.module.scss';
 
-interface ButtonProps {
+interface Props {
   children: React.ReactNode;
   type: 'error';
 }
 
-export default function Alert({ children, type }: ButtonProps) {
+export default function Alert({ children, type }: Props) {
   return (
     <div role={type === 'error' && 'alert'} className={`${styles.alert} ${type === 'error' && styles.error}`}>
       {children}

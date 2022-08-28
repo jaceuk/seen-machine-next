@@ -1,14 +1,14 @@
 import { NavArrowLeft, Search } from 'iconoir-react';
 import styles from './SearchHeader.module.scss';
 
-interface SearchHeaderProps {
+interface Props {
   handleClose: () => void;
   term: string;
   setTerm: (value: string) => void;
   handleSubmit: (event: React.SyntheticEvent<HTMLFormElement>) => void;
 }
 
-export default function SearchHeader({ handleClose, term, setTerm, handleSubmit }: SearchHeaderProps) {
+export default function SearchHeader({ handleClose, term, setTerm, handleSubmit }: Props) {
   function handleChange(event) {
     setTerm(event.target.value);
   }

@@ -6,11 +6,11 @@ import styles from './MenuSideBar.module.scss';
 import Button from '@components/Button';
 import HeaderSideBar from '@components/HeaderSideBar';
 
-interface ProfileProps {
+interface Props {
   handleClose: () => void;
 }
 
-export default function MenuSideBar({ handleClose }: ProfileProps) {
+export default function MenuSideBar({ handleClose }: Props) {
   const router = useRouter();
 
   return (

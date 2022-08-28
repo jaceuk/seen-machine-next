@@ -1,11 +1,11 @@
 import styles from './Title.module.scss';
 
-interface TitleProps {
+interface Props {
   title: string;
   subtext?: string;
 }
 
-export default function Title({ title, subtext }: TitleProps) {
+export default function Title({ title, subtext }: Props) {
   return (
     <div className={styles.title}>
       <h1>{title}</h1>

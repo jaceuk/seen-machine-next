@@ -1,12 +1,12 @@
 import CardHorizontal from '@components/CardHorizontal';
 import { useInView } from 'react-cool-inview';
 
-interface ShowsProps {
+interface Props {
   shows: any;
   fetchMoreShows: (page: number) => Promise<void>;
 }
 
-export default function Shows({ shows, fetchMoreShows }: ShowsProps) {
+export default function Shows({ shows, fetchMoreShows }: Props) {
   const { observe } = useInView({
     // For better UX, we can grow the root margin so the data will be loaded earlier
     rootMargin: '50px 0px',

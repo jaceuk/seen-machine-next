@@ -1,12 +1,12 @@
 import CardHorizontal from '@components/CardHorizontal';
 import { useInView } from 'react-cool-inview';
 
-interface MoviesProps {
+interface Props {
   movies: any;
   fetchMoreMovies: (page: number) => Promise<void>;
 }
 
-export default function Movies({ movies, fetchMoreMovies }: MoviesProps) {
+export default function Movies({ movies, fetchMoreMovies }: Props) {
   const { observe } = useInView({
     // For better UX, we can grow the root margin so the data will be loaded earlier
     rootMargin: '50px 0px',

@@ -4,11 +4,11 @@ import Details from '@modules/DetailsSideBar';
 import posterPlaceholder from '@images/posterPlaceholder.png';
 import styles from './CardHorizontal.module.css';
 
-interface CardHorizontalProps {
+interface Props {
   data: any;
 }
 
-export default function CardHorizontal({ data }: CardHorizontalProps) {
+export default function CardHorizontal({ data }: Props) {
   const [showDetails, setShowDetails] = React.useState(false);
 
   function handleToggleDetails() {

@@ -3,7 +3,7 @@ import { QuestionMarkCircle } from 'iconoir-react';
 import LogoLink from '@components/LogoLink';
 import Button from '@components/Button';
 import styles from './HeaderNoAuth.module.scss';
-import Help from '@components/Help';
+import Help from '@components/HelpSideBar';
 
 export default function HeaderNoAuth() {
   const [showHelp, setShowHelp] = React.useState(false);

@@ -7,12 +7,12 @@ import AddToHistory from './components/AddToHistory';
 import History from './components/History';
 import Status from './components/Status';
 
-interface DetailsSideBarProps {
+interface Props {
   data: any;
   handleClose: () => void;
 }
 
-export default function DetailsSideBar({ data, handleClose }: DetailsSideBarProps) {
+export default function DetailsSideBar({ data, handleClose }: Props) {
   return (
     <SideBar handleClose={handleClose}>
       <>

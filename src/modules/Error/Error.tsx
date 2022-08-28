@@ -1,10 +1,10 @@
 import Title from '@components/Title';
 
-interface ErrorProps {
+interface Props {
   type: string;
   message: string;
 }
 
-export default function Error({ type, message }: ErrorProps) {
+export default function Error({ type, message }: Props) {
   return <Title title={type} subtext={message} />;
 }

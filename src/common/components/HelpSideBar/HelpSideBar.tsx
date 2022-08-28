@@ -1,21 +1,17 @@
+import HeaderSideBar from '@components/HeaderSideBar';
 import SideBar from '@components/SideBar';
-import { NavArrowLeft } from 'iconoir-react';
-import styles from './Help.module.scss';
+import styles from './HelpSideBar.module.scss';
 
-interface HelpProps {
+interface Props {
   handleClose: () => void;
 }
 
-export default function Help({ handleClose }: HelpProps) {
+export default function HelpSideBar({ handleClose }: Props) {
   return (
     <SideBar handleClose={handleClose}>
       <>
-        <header className={styles.header}>
-          <button className={styles.backButton} onClick={handleClose} aria-label="Back">
-            <NavArrowLeft />
-          </button>
-          <h1>Help</h1>
-        </header>
+        <HeaderSideBar title="Help" handleClose={handleClose} />
+
         <main className={styles.main}>
           <p>
             If you are experiencing any difficulites please contact{' '}

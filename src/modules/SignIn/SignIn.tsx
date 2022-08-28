@@ -6,11 +6,11 @@ import Button from '@components/Button';
 import Alert from '@components/Alert';
 import HeaderNoAuth from '@components/HeaderNoAuth';
 
-interface SigninProps {
+interface Props {
   csrfToken: string;
 }
 
-export default function Signin({ csrfToken }: SigninProps) {
+export default function Signin({ csrfToken }: Props) {
   const router = useRouter();
   const query = router.query;
 

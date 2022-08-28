@@ -6,11 +6,11 @@ import Hero from './components/Hero';
 import styles from './Layout.module.scss';
 import useIsDesktop from '@hooks/useIsDesktop';
 
-interface LayoutProps {
+interface Props {
   children: React.ReactNode;
 }
 
-export default function Layout({ children }: LayoutProps) {
+export default function Layout({ children }: Props) {
   const router = useRouter();
   const { status } = useSession();
   const isDesktop = useIsDesktop();

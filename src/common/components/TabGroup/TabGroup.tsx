@@ -1,14 +1,14 @@
 import * as React from 'react';
 import styles from './TabGroup.module.scss';
 
-interface TabGroupProps {
+interface Props {
   shows: any;
   movies: any;
   totalShows?: number;
   totalMovies?: number;
 }
 
-export default function TabGroup({ shows, movies, totalShows = 0, totalMovies = 0 }: TabGroupProps) {
+export default function TabGroup({ shows, movies, totalShows = 0, totalMovies = 0 }: Props) {
   const [selectedTab, setSelectedTab] = React.useState(1);
 
   return (
