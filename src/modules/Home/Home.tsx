@@ -2,10 +2,10 @@ import TabGroup from '@components/TabGroup';
 import CardVertical from '@components/CardVertical';
 import trendingShows from '@data/trendingShows.json';
 import trendingMovies from '@data/trendingMovies.json';
-import styles from './HomePage.module.scss';
+import styles from './Home.module.scss';
 import Title from '@components/Title';
 
-export default function HomePage() {
+export default function Home() {
   return (
     <div>
       <Title title="Recommended" subtext="Your friends thought you might like these" />

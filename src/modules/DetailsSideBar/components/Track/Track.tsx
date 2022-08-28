@@ -11,7 +11,7 @@ export default function Track() {
 
   return (
     <>
-      <h3>Track your viewing</h3>
+      <h3>Keep track of what you&apos;ve watched</h3>
 
       <form className={styles.form}>
         <div className={styles.selects}>

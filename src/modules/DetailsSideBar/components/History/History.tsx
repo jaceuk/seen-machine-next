@@ -2,7 +2,7 @@ import styles from './History.module.scss';
 
 export default function History() {
   return (
-    <div className={styles.container}>
+    <>
       <h3>Watch history</h3>
 
       <table className={styles.table}>
@@ -31,6 +31,6 @@ export default function History() {
           </td>
         </tr>
       </table>
-    </div>
+    </>
   );
 }

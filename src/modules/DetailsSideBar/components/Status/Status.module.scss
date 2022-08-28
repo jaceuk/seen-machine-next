@@ -1,17 +1,37 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--size-small);
+  padding: var(--size-base);
+  background: var(--color-pink);
+
+  @media (min-width: 768px) {
+    padding: var(--size-base);
+  }
+
+  button {
+    flex: 1;
+  }
+}
+
 .message {
   position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: var(--size-small);
-  color: var(--color-white);
-  background: var(--color-red);
-  padding: var(--size-base);
+  color: var(--color-red);
+  background: var(--color-pink);
+  padding: var(--size-small) var(--size-medium);
   border-radius: var(--border-radius-small);
-  font-size: var(--font-size-small);
   font-weight: var(--font-weight-semi-bold);
+  width: fit-content;
+}
 
-  @media (min-width: 768px) {
-    padding: var(--size-base) var(--size-medium);
-  }
+.text {
+  color: var(--color-red);
+  margin-top: var(--size-base);
+  font-size: var(--font-size-small);
+  text-align: center;
 }

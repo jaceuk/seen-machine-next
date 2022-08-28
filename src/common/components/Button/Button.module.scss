@@ -1,6 +1,6 @@
 .button {
   background: var(--color-white);
-  padding: var(--size-base) var(--size-large);
+  padding: var(--size-base) var(--size-medium);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,6 +12,10 @@
   font-weight: var(--font-weight-semi-bold);
   transition: all 0.2s ease-out;
   border: 1px solid var(--color-pale-grey);
+
+  @media (min-width: 768px) {
+    padding: var(--size-base) var(--size-large);
+  }
 
   &:hover {
     box-shadow: var(--button-box-shadow-hover);

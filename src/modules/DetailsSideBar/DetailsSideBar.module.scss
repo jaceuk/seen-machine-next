@@ -1,5 +1,4 @@
 .main {
-  padding: var(--size-base);
   margin-top: -88px;
   z-index: 100;
   position: relative;
@@ -12,26 +11,10 @@
     -webkit-line-clamp: 6;
     -webkit-box-orient: vertical;
     overflow: hidden;
-  }
-
-  .status {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: var(--size-base);
-  }
-
-  .panel {
-    background: var(--color-pale-grey);
-    padding: var(--size-base);
-    border-radius: var(--border-radius-medium);
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: var(--size-medium);
+    padding: var(--size-base) var(--size-base) 0 var(--size-base);
 
     @media (min-width: 768px) {
-      padding: var(--size-medium);
+      padding: var(--size-medium) var(--size-medium) 0 var(--size-medium);
     }
   }
 }

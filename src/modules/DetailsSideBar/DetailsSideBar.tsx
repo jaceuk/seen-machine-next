@@ -7,6 +7,7 @@ import Recommend from './components/Recommend';
 import Track from './components/Track';
 import History from './components/History';
 import Status from './components/Status';
+import TabGroup from './components/TabGroup';
 
 interface Props {
   data: any;
@@ -25,21 +26,9 @@ export default function DetailsSideBar({ data, handleClose }: Props) {
         <main className={styles.main}>
           <div className={styles.synopsis}>{data.overview}</div>
 
-          <div className={styles.status}>
-            <Status />
-          </div>
+          <Status />
 
-          <div className={styles.panel}>
-            <Track />
-          </div>
-
-          <div className={styles.panel}>
-            <Recommend />
-          </div>
-
-          <div>
-            <History />
-          </div>
+          <TabGroup />
         </main>
       </>
     </SideBar>

@@ -10,20 +10,26 @@ export default function Status() {
   }
 
   return (
-    <>
-      <div className={styles.message}>
-        <div className="svg-container">
-          <ThumbsUp />
+    <div>
+      <div className={styles.container}>
+        <div className={styles.message}>
+          <div className="svg-container">
+            <ThumbsUp />
+          </div>
+          <span className="hide-on-mobile">Recommended</span>
         </div>
-        Recommended by Jason Newington
+
+        <button onClick={handleClick}>
+          <Button>
+            <div className="svg-container">
+              <Plus />
+            </div>
+            Add to watch list
+          </Button>
+        </button>
       </div>
 
-      <button onClick={handleClick}>
-        <Button>
-          <Plus />
-          Add to watch list
-        </Button>
-      </button>
-    </>
+      <div className={styles.text}>Recommended by Jason Newington</div>
+    </div>
   );
 }

@@ -30,11 +30,6 @@ export default function Recommend() {
           </select>
         </div>
 
-        <div className="form-field">
-          <label htmlFor="comment">Comment</label>
-          <textarea id="comment"></textarea>
-        </div>
-
         <button type="submit" onClick={handleClick}>
           <Button active>Send recommendation</Button>
         </button>
