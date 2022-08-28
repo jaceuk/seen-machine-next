@@ -28,18 +28,18 @@ export default function MenuSideBar({ handleClose }: ProfileProps) {
             </a>
           </Link>
 
-          <Link href="/watched">
+          <Link href="/history">
             <a>
-              <Button active={router.pathname === '/watched'}>
+              <Button active={router.pathname === '/history'}>
                 <SecurityPass />
-                Watched
+                Watch history
               </Button>
             </a>
           </Link>
 
-          <Link href="/watchlist">
+          <Link href="/list">
             <a>
-              <Button active={router.pathname === '/watchlist'}>
+              <Button active={router.pathname === '/list'}>
                 <Calendar />
                 Watch list
               </Button>

@@ -22,22 +22,22 @@ export default function Nav() {
       </div>
 
       <div className={styles.navItem}>
-        <div className={`${styles.pill} ${router.pathname === '/watched' ? styles.active : ''}`} />
-        <Link href="/watched">
+        <div className={`${styles.pill} ${router.pathname === '/history' ? styles.active : ''}`} />
+        <Link href="/history">
           <a>
-            <IconButton active={router.pathname === '/watched'}>
+            <IconButton active={router.pathname === '/history'}>
               <SecurityPass />
-              <span className="sr-only">Watched</span>
+              <span className="sr-only">Watch history</span>
             </IconButton>
           </a>
         </Link>
       </div>
 
       <div className={styles.navItem}>
-        <div className={`${styles.pill} ${router.pathname === '/watchlist' ? styles.active : ''}`} />
-        <Link href="/watchlist">
+        <div className={`${styles.pill} ${router.pathname === '/list' ? styles.active : ''}`} />
+        <Link href="/list">
           <a>
-            <IconButton active={router.pathname === '/watchlist'}>
+            <IconButton active={router.pathname === '/list'}>
               <Calendar />
               <span className="sr-only">Watch list</span>
             </IconButton>

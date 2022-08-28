@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { getSession, useSession } from 'next-auth/react';
 import Layout from '@components/Layout';
-import WatchList from '@modules/WatchList';
+import History from '@modules/History';
 
 export default function Home() {
   const { status } = useSession();
@@ -11,10 +11,10 @@ export default function Home() {
       {status === 'authenticated' && (
         <>
           <Head>
-            <title>Seen Machine - Watch list</title>
+            <title>Seen Machine - Watched</title>
           </Head>
           <Layout>
-            <WatchList />
+            <History />
           </Layout>
         </>
       )}
