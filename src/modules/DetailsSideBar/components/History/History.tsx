@@ -18,7 +18,7 @@ export default function History() {
           <td>1</td>
           <td>12th August 2022</td>
           <td>
-            <button>Delete</button>
+            <button>Remove</button>
           </td>
         </tr>
 
@@ -27,7 +27,7 @@ export default function History() {
           <td>2</td>
           <td>12th August 2022</td>
           <td>
-            <button>Delete</button>
+            <button>Remove</button>
           </td>
         </tr>
       </table>

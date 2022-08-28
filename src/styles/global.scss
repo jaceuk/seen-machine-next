@@ -64,7 +64,8 @@ button {
   }
 
   input,
-  select {
+  select,
+  textarea {
     width: 100%;
     background: #ffffff;
     box-shadow: 0px 0px var(--size-small) rgba(0, 0, 0, 0.15);
@@ -79,6 +80,10 @@ button {
     background-repeat: no-repeat, repeat;
     background-position: right var(--size-base) top 50%, 0 0;
     background-size: var(--size-medium) auto, 100%;
+  }
+
+  textarea {
+    height: 150px;
   }
 
   &.error {
