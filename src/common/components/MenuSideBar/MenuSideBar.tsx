@@ -37,9 +37,9 @@ export default function MenuSideBar({ handleClose }: ProfileProps) {
             </a>
           </Link>
 
-          <Link href="/list">
+          <Link href="/watchlist">
             <a>
-              <Button active={router.pathname === '/list'}>
+              <Button active={router.pathname === '/watchlist'}>
                 <Calendar />
                 Watch list
               </Button>

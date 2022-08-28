@@ -63,7 +63,8 @@ button {
     font-weight: var(--font-weight-semi-bold);
   }
 
-  input {
+  input,
+  select {
     width: 100%;
     background: #ffffff;
     box-shadow: 0px 0px var(--size-small) rgba(0, 0, 0, 0.15);

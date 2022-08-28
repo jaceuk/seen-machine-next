@@ -1,0 +1,17 @@
+.message {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--size-small);
+  color: var(--color-white);
+  background: var(--color-red);
+  padding: var(--size-base);
+  border-radius: var(--border-radius-small);
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-semi-bold);
+
+  @media (min-width: 768px) {
+    padding: var(--size-base) var(--size-medium);
+  }
+}

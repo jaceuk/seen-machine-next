@@ -2,8 +2,10 @@ import SideBar from '@components/SideBar';
 import styles from './DetailsSideBar.module.scss';
 import HeaderSideBar from '@components/HeaderSideBar';
 import Hero from './components/Hero';
-import { Plus, ThumbsUp } from 'iconoir-react';
-import Button from '@components/Button';
+import Recommend from './components/Recommend';
+import AddToHistory from './components/AddToHistory';
+import History from './components/History';
+import Status from './components/Status';
 
 interface DetailsSideBarProps {
   data: any;
@@ -21,38 +23,19 @@ export default function DetailsSideBar({ data, handleClose }: DetailsSideBarProp
           <div className={styles.synopsis}>{data.overview}</div>
 
           <div className={styles.status}>
-            <div className={styles.message}>
-              <div className="svg-container">
-                <ThumbsUp />
-              </div>
-              Recommended by Jason Newington
-            </div>
-
-            <button>
-              <Button>
-                <Plus />
-                Add to watch list
-              </Button>
-            </button>
+            <Status />
           </div>
 
           <div className={styles.panel}>
-            <h3>Have you watched this?</h3>
-
-            <button>
-              <Button>
-                <Plus />
-                Add to watch history
-              </Button>
-            </button>
+            <AddToHistory />
           </div>
 
           <div className={styles.panel}>
-            <h3>Recommend to a friend</h3>
+            <Recommend />
+          </div>
 
-            <button>
-              <Button active>Send recommendation</Button>
-            </button>
+          <div>
+            <History />
           </div>
         </main>
       </>

@@ -34,10 +34,10 @@ export default function Nav() {
       </div>
 
       <div className={styles.navItem}>
-        <div className={`${styles.pill} ${router.pathname === '/list' ? styles.active : ''}`} />
-        <Link href="/list">
+        <div className={`${styles.pill} ${router.pathname === '/watchlist' ? styles.active : ''}`} />
+        <Link href="/watchlist">
           <a>
-            <IconButton active={router.pathname === '/list'}>
+            <IconButton active={router.pathname === '/watchlist'}>
               <Calendar />
               <span className="sr-only">Watch list</span>
             </IconButton>
