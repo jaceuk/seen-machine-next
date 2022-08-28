@@ -12,24 +12,30 @@ export default function AddToHistory() {
       <h3>Have you watched this?</h3>
 
       <form className={styles.form}>
-        <div className="form-field">
-          <label htmlFor="seasons">Season</label>
-          <select name="seasons" id="seasons">
-            <option value="volvo">1</option>
-            <option value="saab">2</option>
-            <option value="mercedes">3</option>
-            <option value="audi">4</option>
-          </select>
-        </div>
+        <div className={styles.selects}>
+          <div className={styles.select}>
+            <div className="form-field">
+              <label htmlFor="seasons">Season</label>
+              <select name="seasons" id="seasons">
+                <option value="volvo">1</option>
+                <option value="saab">2</option>
+                <option value="mercedes">3</option>
+                <option value="audi">4</option>
+              </select>
+            </div>
+          </div>
 
-        <div className="form-field">
-          <label htmlFor="episodes">Episode</label>
-          <select name="episodes" id="episodes">
-            <option value="volvo">1</option>
-            <option value="saab">2</option>
-            <option value="mercedes">3</option>
-            <option value="audi">4</option>
-          </select>
+          <div className={styles.select}>
+            <div className="form-field">
+              <label htmlFor="episodes">Episode</label>
+              <select name="episodes" id="episodes">
+                <option value="volvo">1</option>
+                <option value="saab">2</option>
+                <option value="mercedes">3</option>
+                <option value="audi">4</option>
+              </select>
+            </div>
+          </div>
         </div>
 
         <button type="submit" onClick={handleClick}>

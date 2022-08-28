@@ -2,4 +2,13 @@
   display: flex;
   flex-direction: column;
   gap: var(--size-base);
+
+  .selects {
+    display: flex;
+    gap: var(--size-base);
+
+    .select {
+      width: 100%;
+    }
+  }
 }
