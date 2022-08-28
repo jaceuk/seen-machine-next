@@ -4,7 +4,7 @@
   align-items: center;
   gap: var(--size-small);
   padding: var(--size-base);
-  background: var(--color-pink);
+  background: var(--divider-gradient-pink);
 
   @media (min-width: 768px) {
     padding: var(--size-base);
@@ -22,7 +22,6 @@
   align-items: center;
   gap: var(--size-small);
   color: var(--color-red);
-  background: var(--color-pink);
   padding: var(--size-small) var(--size-medium);
   border-radius: var(--border-radius-small);
   font-weight: var(--font-weight-semi-bold);

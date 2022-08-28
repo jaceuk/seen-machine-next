@@ -4,8 +4,8 @@
 
 .container {
   [role='tabpanel'] {
-    background: var(--color-pale-grey);
-    padding: var(--size-medium) var(--size-base);
+    background: var(--divider-gradient);
+    padding: var(--size-medium) var(--size-base) var(--size-large) var(--size-base);
     position: relative;
     display: flex;
     flex-direction: column;
@@ -20,7 +20,6 @@
 .tablist {
   display: flex;
   gap: var(--size-base);
-  margin-bottom: var(--size-large);
   position: relative;
   background: var(--color-white);
   width: fit-content;
