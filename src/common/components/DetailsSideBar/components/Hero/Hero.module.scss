@@ -1,0 +1,27 @@
+.backdrop {
+  width: 100%;
+  position: relative;
+  height: 262px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  @media (min-width: 900px) {
+    height: 462px;
+  }
+}
+
+.footer {
+  height: 88px;
+  width: 100%;
+  background: var(--nav-background);
+  z-index: 50;
+  position: relative;
+
+  .fadeOut {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, var(--color-white) 100%);
+    backdrop-filter: blur(2px);
+    height: 100%;
+    box-shadow: var(--footer-box-shadow);
+  }
+}

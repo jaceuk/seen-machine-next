@@ -1,56 +1,55 @@
-.backdrop {
-  width: 100%;
-  position: relative;
-  height: 262px;
-
-  @media (min-width: 900px) {
-    height: 462px;
-  }
-}
-
-.backButton {
-  padding: var(--size-small);
-  display: flex;
-}
-
 .main {
   padding: var(--size-base);
-  background: var(--color-white);
-}
-
-.container {
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 500;
-  overflow-y: auto;
-  box-shadow: var(--left-side-box-shadow);
-
-  @media (min-width: 768px) {
-    width: 500px;
-    left: calc(100vw - 500px);
-  }
-
-  @media (min-width: 900px) {
-    width: 600px;
-    left: calc(100vw - 600px);
-  }
-}
-
-.contents {
-  overflow-y: auto;
-}
-
-.title {
+  margin-top: -88px;
+  z-index: 100;
+  position: relative;
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: var(--size-base);
+  flex-direction: column;
+  gap: var(--size-large);
 
-  h1 {
-    font-size: var(--font-size-h1);
+  .synopsis {
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .status {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-base);
+
+    .message {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: var(--size-small);
+      color: var(--color-dark-green);
+      background: var(--color-pale-green);
+      padding: var(--size-base);
+      border-radius: var(--border-radius-small);
+      font-size: var(--font-size-small);
+      font-weight: var(--font-weight-semi-bold);
+
+      @media (min-width: 768px) {
+        padding: var(--size-base) var(--size-medium);
+      }
+    }
+  }
+
+  .panel {
+    background: var(--color-grey-light);
+    padding: var(--size-base);
+    border-radius: var(--border-radius-medium);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-medium);
+
+    @media (min-width: 768px) {
+      padding: var(--size-medium);
+    }
   }
 }
