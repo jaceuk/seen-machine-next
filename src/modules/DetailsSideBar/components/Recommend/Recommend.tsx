@@ -1,5 +1,5 @@
+import { toast } from 'react-toastify';
 import Button from '@components/Button';
-import { NavArrowDown } from 'iconoir-react';
 import styles from './Recommend.module.scss';
 
 const friends = [
@@ -10,7 +10,8 @@ const friends = [
 
 export default function Recommend() {
   function handleClick() {
-    alert('Recommendation sent');
+    event.preventDefault();
+    toast.success('Recommendation sent');
   }
 
   return (

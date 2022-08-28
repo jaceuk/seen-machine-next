@@ -1,3 +1,4 @@
+import { ToastContainer } from 'react-toastify';
 import SideBar from '@components/SideBar';
 import styles from './DetailsSideBar.module.scss';
 import HeaderSideBar from '@components/HeaderSideBar';
@@ -16,6 +17,8 @@ export default function DetailsSideBar({ data, handleClose }: Props) {
   return (
     <SideBar handleClose={handleClose}>
       <>
+        <ToastContainer />
+
         <HeaderSideBar title={data.name || data.title} handleClose={handleClose} />
         <Hero filename={data.backdrop_path} />
 

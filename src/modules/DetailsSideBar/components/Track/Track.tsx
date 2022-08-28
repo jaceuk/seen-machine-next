@@ -1,10 +1,12 @@
+import { toast } from 'react-toastify';
 import Button from '@components/Button';
 import { Plus } from 'iconoir-react';
 import styles from './Track.module.scss';
 
 export default function Track() {
   function handleClick() {
-    alert('Added to watch history');
+    event.preventDefault();
+    toast.success('Added to watch history');
   }
 
   return (
