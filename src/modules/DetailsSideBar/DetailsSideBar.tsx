@@ -3,7 +3,7 @@ import styles from './DetailsSideBar.module.scss';
 import HeaderSideBar from '@components/HeaderSideBar';
 import Hero from './components/Hero';
 import Recommend from './components/Recommend';
-import AddToHistory from './components/AddToHistory';
+import Track from './components/Track';
 import History from './components/History';
 import Status from './components/Status';
 
@@ -27,7 +27,7 @@ export default function DetailsSideBar({ data, handleClose }: Props) {
           </div>
 
           <div className={styles.panel}>
-            <AddToHistory />
+            <Track />
           </div>
 
           <div className={styles.panel}>

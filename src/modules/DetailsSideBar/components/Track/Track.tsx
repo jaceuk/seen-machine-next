@@ -1,15 +1,15 @@
 import Button from '@components/Button';
 import { Plus } from 'iconoir-react';
-import styles from './AddToHistory.module.scss';
+import styles from './Track.module.scss';
 
-export default function AddToHistory() {
+export default function Track() {
   function handleClick() {
     alert('Added to watch history');
   }
 
   return (
     <>
-      <h3>Have you watched this?</h3>
+      <h3>Track your viewing</h3>
 
       <form className={styles.form}>
         <div className={styles.selects}>
