@@ -11,7 +11,7 @@ export default function Status() {
 
   return (
     <div>
-      <div className={styles.container}>
+      <div className={`inner ${styles.container}`}>
         <div className={styles.message}>
           <div className="svg-container">
             <ThumbsUp />

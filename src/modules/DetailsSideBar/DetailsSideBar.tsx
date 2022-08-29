@@ -25,9 +25,7 @@ export default function DetailsSideBar({ data, handleClose }: Props) {
 
         <main className={styles.main}>
           <Status />
-
-          <div className={styles.synopsis}>{data.overview}</div>
-
+          <div className={`inner ${styles.synopsis}`}>{data.overview}</div>
           <TabGroup />
         </main>
       </>

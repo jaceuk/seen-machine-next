@@ -9,7 +9,7 @@ export default function TabGroup() {
 
   return (
     <div className={styles.container}>
-      <div className={styles.tablist} role="tablist" aria-orientation="horizontal">
+      <div className={`inner ${styles.tablist}`} role="tablist" aria-orientation="horizontal">
         <button
           className={`${styles.button}`}
           onClick={() => setSelectedTab(1)}

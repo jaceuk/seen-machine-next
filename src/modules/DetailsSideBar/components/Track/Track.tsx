@@ -43,7 +43,7 @@ export default function Track() {
         </div>
 
         <button type="submit" onClick={handleClick}>
-          <Button>
+          <Button active>
             <Plus />
             Add to watch history
           </Button>

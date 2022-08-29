@@ -138,3 +138,11 @@ button {
 .svg-container {
   display: flex;
 }
+
+.inner {
+  padding: 0 var(--size-base);
+
+  @media (min-width: 768px) {
+    padding: 0 var(--size-medium);
+  }
+}

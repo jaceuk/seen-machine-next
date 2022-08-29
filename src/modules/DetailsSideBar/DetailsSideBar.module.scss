@@ -12,10 +12,5 @@
     -webkit-line-clamp: 6;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    padding: 0 var(--size-base);
-
-    @media (min-width: 768px) {
-      padding: 0 var(--size-medium);
-    }
   }
 }

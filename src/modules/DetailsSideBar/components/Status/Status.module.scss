@@ -3,11 +3,6 @@
   flex-direction: row;
   align-items: center;
   gap: var(--size-medium);
-  padding: 0 var(--size-base);
-
-  @media (min-width: 768px) {
-    padding: 0 var(--size-medium);
-  }
 
   button {
     flex: 1;

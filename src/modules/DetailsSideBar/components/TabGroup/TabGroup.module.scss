@@ -2,10 +2,21 @@
   font-size: var(--font-size-extra-small);
 }
 
+.tablist {
+  display: flex;
+  gap: var(--size-base);
+  position: relative;
+  width: fit-content;
+}
+
 .container {
+  display: flex;
+  gap: var(--size-medium);
+  flex-direction: column;
+
   [role='tabpanel'] {
     background: var(--divider-gradient);
-    padding: var(--size-medium) var(--size-base) var(--size-large) var(--size-base);
+    padding: var(--size-medium) var(--size-base);
     position: relative;
     display: flex;
     flex-direction: column;
@@ -14,18 +25,6 @@
     @media (min-width: 768px) {
       padding: var(--size-large) var(--size-medium);
     }
-  }
-}
-
-.tablist {
-  display: flex;
-  gap: var(--size-base);
-  position: relative;
-  width: fit-content;
-  padding: 0 var(--size-base) var(--size-medium) var(--size-base);
-
-  @media (min-width: 768px) {
-    padding: 0 var(--size-medium) var(--size-medium) var(--size-medium);
   }
 }
 
