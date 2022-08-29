@@ -21,13 +21,11 @@
   display: flex;
   gap: var(--size-base);
   position: relative;
-  background: var(--color-white);
   width: fit-content;
-  padding: 0 var(--size-base);
+  padding: 0 var(--size-base) var(--size-medium) var(--size-base);
 
   @media (min-width: 768px) {
-    margin-bottom: var(--size-large);
-    padding: 0 var(--size-medium);
+    padding: 0 var(--size-medium) var(--size-medium) var(--size-medium);
   }
 }
 

@@ -31,7 +31,7 @@ export default function Status() {
 
       <div className={styles.text}>Recommended by Jason Newington</div>
 
-      <div className={styles.container}>
+      {/* <div className={styles.container}>
         <div className={styles.message}>
           <div className="svg-container">
             <Calendar />
@@ -47,7 +47,16 @@ export default function Status() {
             Remove<span className="hide-on-mobile"> from watch list</span>
           </Button>
         </button>
-      </div>
+      </div> */}
+
+      {/* <div className={styles.container}>
+        <div className={styles.message}>
+          <div className="svg-container">
+            <Calendar />
+          </div>
+          <span>You&apos;ve watched this</span>
+        </div>
+      </div> */}
     </div>
   );
 }

@@ -24,9 +24,9 @@ export default function DetailsSideBar({ data, handleClose }: Props) {
         <Hero filename={data.backdrop_path} />
 
         <main className={styles.main}>
-          <div className={styles.synopsis}>{data.overview}</div>
-
           <Status />
+
+          <div className={styles.synopsis}>{data.overview}</div>
 
           <TabGroup />
         </main>
