@@ -3,9 +3,6 @@ import SideBar from '@components/SideBar';
 import styles from './DetailsSideBar.module.scss';
 import HeaderSideBar from '@components/HeaderSideBar';
 import Hero from './components/Hero';
-import Recommend from './components/Recommend';
-import Track from './components/Track';
-import History from './components/History';
 import Status from './components/Status';
 import TabGroup from './components/TabGroup';
 
