@@ -1,12 +1,9 @@
 .container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   gap: var(--size-medium);
-
-  button {
-    flex: 1;
-  }
+  justify-content: space-between;
 }
 
 .message {
@@ -18,7 +15,7 @@
   color: var(--color-red);
   border-radius: var(--border-radius-small);
   font-weight: var(--font-weight-semi-bold);
-  width: fit-content;
+  width: 100%;
 }
 
 .text {

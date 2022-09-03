@@ -16,7 +16,7 @@ export default function Status() {
           <div className="svg-container">
             <ThumbsUp />
           </div>
-          <span className="hide-on-mobile">Recommended</span>
+          <span>Recommended by Jason Newington</span>
         </div>
 
         <button onClick={handleClick}>
@@ -29,14 +29,12 @@ export default function Status() {
         </button>
       </div>
 
-      <div className={styles.text}>Recommended by Jason Newington</div>
-
-      {/* <div className={styles.container}>
+      {/* <div className={`inner ${styles.container}`}>
         <div className={styles.message}>
           <div className="svg-container">
             <Calendar />
           </div>
-          <span>On watch list</span>
+          <span>On your watch list</span>
         </div>
 
         <button onClick={handleClick}>
@@ -44,12 +42,12 @@ export default function Status() {
             <div className="svg-container">
               <Minus />
             </div>
-            Remove<span className="hide-on-mobile"> from watch list</span>
+            Remove from watch list
           </Button>
         </button>
       </div> */}
 
-      {/* <div className={styles.container}>
+      {/* <div className={`inner ${styles.container}`}>
         <div className={styles.message}>
           <div className="svg-container">
             <Calendar />
