@@ -186,4 +186,36 @@ button {
       width: 400px;
     }
   }
+
+  .Toastify__toast--success {
+    background: var(--color-pale-green);
+    color: var(--color-dark-green);
+
+    .Toastify__toast-icon,
+    .Toastify__close-button {
+      svg {
+        fill: var(--color-green);
+      }
+    }
+
+    .Toastify__progress-bar {
+      background: var(--color-green);
+    }
+  }
+
+  .Toastify__toast--error {
+    background: var(--color-pale-red);
+    color: var(--color-dark-red);
+
+    .Toastify__toast-icon,
+    .Toastify__close-button {
+      svg {
+        fill: var(--color-red);
+      }
+    }
+
+    .Toastify__progress-bar {
+      background: var(--color-red);
+    }
+  }
 }

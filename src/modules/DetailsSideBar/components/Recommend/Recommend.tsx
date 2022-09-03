@@ -11,7 +11,7 @@ const friends = [
 export default function Recommend() {
   function handleClick() {
     event.preventDefault();
-    toast.success('Recommendation sent');
+    toast.error('Recommendation sent');
   }
 
   return (
