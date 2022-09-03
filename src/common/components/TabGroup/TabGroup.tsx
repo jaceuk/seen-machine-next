@@ -12,7 +12,7 @@ export default function TabGroup({ shows, movies, totalShows = 0, totalMovies = 
   const [selectedTab, setSelectedTab] = React.useState(1);
 
   return (
-    <>
+    <div className={styles.tabs}>
       <div className={styles.tablist} role="tablist" aria-orientation="horizontal">
         <button
           className={`${styles.button}`}
@@ -50,6 +50,6 @@ export default function TabGroup({ shows, movies, totalShows = 0, totalMovies = 
           {movies}
         </div>
       )}
-    </>
+    </div>
   );
 }

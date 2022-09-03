@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: var(--size-medium);
-  margin: var(--size-base) calc(var(--size-base) * -1);
+  margin: 0 calc(var(--size-base) * -1);
   padding: 0 var(--size-base);
 
   @media (min-width: 600px) {

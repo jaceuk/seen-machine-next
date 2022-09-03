@@ -2,10 +2,15 @@
   font-size: var(--font-size-extra-small);
 }
 
+.tabs {
+  display: flex;
+  gap: var(--size-medium);
+  flex-direction: column;
+}
+
 .tablist {
   display: flex;
   gap: var(--size-base);
-  margin-bottom: var(--size-large);
   position: relative;
   background: var(--color-white);
   width: fit-content;

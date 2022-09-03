@@ -16,5 +16,5 @@ export default async function fetchData(prevResults: any, term: string | string[
     };
   }
 
-  throw new Error(data.status_message);
+  return data.success;
 }

@@ -1,9 +1,19 @@
 .main {
   padding: var(--size-base);
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-medium);
 }
 
 .results {
   display: flex;
   flex-direction: column;
   gap: var(--size-base);
+}
+
+.loading {
+  display: flex;
+  gap: var(--size-small);
+  align-items: center;
+  justify-content: center;
 }
